@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@import "compass";
+@import "colors";
+
+$diam : 50px;
+
+#parentPointers{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    perspective : 1000px;
+    -webkit-perspective : 1000px;
+    transform-style : preserve-3d;
+    -webkit-transform-style : preserve-3d;    
+}
+
+
+#pointerTest{
+    position: absolute;
+    width: $diam;
+    height: $diam;
+    border-radius: $diam;
+    background-color: rgba(255,255,255,0.7);
+    transform : translateZ(500px);
+    -webkit-transform : translateZ(500px);
+}
+
+#pointerShadow{
+    position: absolute;
+    width: $diam;
+    height: $diam;
+    border-radius: $diam;
+    background-color: black;
+    transform : translateZ(-10px);
+    -webkit-transform : translateZ(-10px);
+    box-shadow: 0 0 40px black;
+    -webkit-box-shadow: 0 0 40px black;
+}

@@ -1,0 +1,124 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "034e645aa3bad56ce68389a816547c87",
+      "css": "up-hand-1",
+      "code": 59392,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "f001fc3d4daa7da078e8c971e4f36977",
+      "css": "tablet",
+      "code": 59393,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "0357f7abbc0babf43509669f332e41e6",
+      "css": "mobile",
+      "code": 59394,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "ff70f7b3228702e0d590e60ed3b90bea",
+      "css": "magic",
+      "code": 59398,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "815503841e980c848f55e0271deacead",
+      "css": "link",
+      "code": 59410,
+      "src": "entypo"
+    },
+    {
+      "uid": "767fede84586366cd7d6c835be745454",
+      "css": "mobile-2",
+      "code": 59407,
+      "src": "entypo"
+    },
+    {
+      "uid": "34ba50fe8e4f95e7f3d76c6534814a70",
+      "css": "infinity-1",
+      "code": 59408,
+      "src": "entypo"
+    },
+    {
+      "uid": "e5e2804a6d7681eb37e80a1fc380fe49",
+      "css": "wristwatch",
+      "code": 59406,
+      "src": "typicons"
+    },
+    {
+      "uid": "d054fe11fb18e0ac8035d0d9ad556e3b",
+      "css": "infinity-outline",
+      "code": 59395,
+      "src": "typicons"
+    },
+    {
+      "uid": "2039c86dq3jtfwqmgow2quvuzq3k34bu",
+      "css": "infinity",
+      "code": 59396,
+      "src": "typicons"
+    },
+    {
+      "uid": "frauy9fser6zk9n5ih3rdpz7zzfjbrvu",
+      "css": "eye",
+      "code": 59399,
+      "src": "modernpics"
+    },
+    {
+      "uid": "m3m8301t2xdy30x4lp7txm0vztl67tcl",
+      "css": "mobile-1",
+      "code": 59403,
+      "src": "modernpics"
+    },
+    {
+      "uid": "raxalm7kdj5at9v49bevw6r2cw7fdv9r",
+      "css": "mobile-alt",
+      "code": 59404,
+      "src": "modernpics"
+    },
+    {
+      "uid": "r36ey62e6pi493s139u528739kjr3o8w",
+      "css": "tablet-1",
+      "code": 59405,
+      "src": "modernpics"
+    },
+    {
+      "uid": "86cc7238838f8a1d9d442ee34120c78e",
+      "css": "up-hand",
+      "code": 59397,
+      "src": "elusive"
+    },
+    {
+      "uid": "df4bad7f2eb18034fdfa1cbb3ddf8ac4",
+      "css": "cloud",
+      "code": 59400,
+      "src": "elusive"
+    },
+    {
+      "uid": "10fdd98fb50c590b805a3ad6ff9c55f5",
+      "css": "asl",
+      "code": 59401,
+      "src": "elusive"
+    },
+    {
+      "uid": "a3662e0fce8c28f9b91a3889094cd1e9",
+      "css": "glasses",
+      "code": 59409,
+      "src": "elusive"
+    },
+    {
+      "uid": "d4385b9337eeaa7feb48465b50649042",
+      "css": "universal-access",
+      "code": 59402,
+      "src": "elusive"
+    }
+  ]
+}

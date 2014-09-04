@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="devfestleap" id="ng-app">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Leap DevFest 2014</title>
+
+  <!-- build:css(src/main/webapp) css/app.css -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+  <link rel="stylesheet" href="components/fontello/css/fontello.css">
+  <!-- endbuild -->
+
+</head>
+<body>
+
+  <div ng-view leap-controller></div>
+
+  <!-- build:js(src/main/webapp) javascript/app.js -->
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/angular/angular.js"></script>  
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="components/leap/leap.min.js"></script>
+  <script src="components/modernizr/modernizr.js"></script>
+  <!-- Application -->
+  <script src="javascript/app.js"></script>
+
+  <!-- Directives -->
+  <script src="javascript/components/components.js"></script>
+  <script src="javascript/components/directives/leap-controller.js"></script>
+  <script src="javascript/components/directives/screen-opacity.js"></script>
+  <script src="javascript/components/directives/menu-navigation.js"></script>
+  <script src="javascript/components/directives/pointer-leap.js"></script>
+  <script src="javascript/components/directives/panel-instructions.js"></script>
+  <script src="javascript/components/directives/fil-ariane.js"></script>
+  <script src="javascript/components/directives/legende.js"></script>
+  <script src="javascript/components/directives/content.js"></script>
+  
+
+  <!-- Module Borne IV -->
+  <script src="javascript/main/main.js"></script>
+  <script src="javascript/main/controllers/main.js"></script>
+  <!-- endbuild -->
+
+</body>
+</html>

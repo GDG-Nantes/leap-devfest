@@ -1,0 +1,134 @@
+@charset "UTF-8";
+@import "compass";
+@import "colors";
+@import "menu";
+@import "pointer";
+
+
+
+html, body {
+    background-color: $bg-color;
+    width:100%;
+    height:100%;
+    /*background-image:radial-gradient(#ffffff, #3E3D40);*/
+    /*background-image:radial-gradient(#3E3D40, #000000);
+    background-size:150%;*/
+    background-image:radial-gradient($bg-color , #E0DED8);
+    background-position:center;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+
+
+#panel-instructions{
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    border-top: solid 5px $color-select;
+    transition-property: height;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay : 0s;
+    overflow: hidden;
+}
+
+#panel-instructions.hide{
+    height: 0;
+}
+
+#panel-instructions .gesture-one-finger{
+    background-image: url('../assets/images/one_finger_drag_gestureworks.png');
+    position: absolute;
+    background-size: 128px 128px;
+    width: 128px;
+    height: 128px;
+    top: 50%;
+    margin-top: -64px;
+    left: 200px;
+
+}
+
+#panel-instructions .instruction{
+   position: absolute;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    left: 310px;
+    top: 50%;
+    margin-top: 25px;
+
+}
+
+#ariane{
+    position: absolute;
+    right: 0;
+    color : $color-select;
+    bottom : calc(20% + 5px);
+    font-size: 20px;
+}
+
+.ariane-curent{
+    display: inline;
+    background-color: $color-select;
+    color:white;
+    padding: 5px 10px;
+}
+
+#mask{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#legende{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -400px;
+    width: 800px;
+    height: 600px;
+    background-color: $bg-color;
+    box-shadow: 0 0 40px black;
+    -webkit-box-shadow: 0 0 40px black;
+}
+
+#img_hand{
+     background-image: url('../assets/images/five_finger_scroll_gestureworks.png');
+    position: absolute;
+    background-size: 512px 512px;
+    width: 512px;
+    height: 512px;
+    top: 50%;
+    margin-top: -256px;
+    left: 50px;
+}
+
+#text_legende{
+    width: 200px;
+    position: absolute;
+    top: 200px;
+    right: 50px;
+    font-size: 40px;
+}
+
+
+div.parent-video{
+    padding-top: 100px;    
+    margin: auto;
+    width: 800px;
+}
+
+video{
+    width: 800px;
+}
+
+

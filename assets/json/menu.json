@@ -1,0 +1,188 @@
+[
+{
+	"id" : "0",
+	"label" : "Autour de moi",
+	"icon" : "circle-o",
+	"submenus": [
+	{
+		"id" : "0.1",
+		"label" : "menu 0.1",
+		"submenus": [
+		{
+			"id" : "0.1.1",
+			"label" : "menu 0.1.1"
+		},
+		{
+			"id" : "0.1.2",
+			"label" : "menu 0.1.2"
+		},
+		{
+			"id" : "0.1.3",
+			"label" : "menu 0.1.3"
+		},
+		{
+			"id" : "0.1.4",
+			"label" : "menu 0.1.4"
+		}
+		]
+	},
+	{
+		"id" : "0.2",
+		"label" : "menu 0.2",
+		"submenus": [
+		{
+			"id" : "0.2.1",
+			"label" : "menu 0.2.1"
+		},
+		{
+			"id" : "0.2.2",
+			"label" : "menu 0.2.2"
+		},
+		{
+			"id" : "0.2.3",
+			"label" : "menu 0.2.3"
+		}
+		]
+	},
+	{
+		"id" : "0.3",
+		"label" : "menu 0.3",
+		"submenus": [
+		{
+			"id" : "0.3.1",
+			"label" : "menu 0.3.1"
+		},
+		{
+			"id" : "0.3.2",
+			"label" : "menu 0.3.2"
+		},
+		{
+			"label" : "menu 0.3.3"
+		}
+		]
+	}
+	]
+},
+{
+	"id" : "1",
+	"label" : "Je pars",
+	"icon" : "upload",
+	"submenus": [
+	{
+		"id" : "1.1",
+		"label" : "menu 1.1",
+		"submenus": [
+		{
+			"id" : "1.1.1",
+			"label" : "menu 1.1.1"
+		},
+		{
+			"id" : "1.1.2",
+			"label" : "menu 1.1.2"
+		},
+		{
+			"id" : "1.1.3",
+			"label" : "menu 1.1.3"
+		}
+		]
+	},
+	{
+		"id" : "1.2",
+		"label" : "menu 1.2",
+		"submenus": [
+		{
+			"id" : "1.2.1",
+			"label" : "menu 1.2.1"
+		},
+		{
+			"id" : "1.2.2",
+			"label" : "menu 1.2.2"
+		},
+		{
+			"id" : "1.2.3",
+			"label" : "menu 1.2.3"
+		}
+		]
+	},
+	{
+		"id" : "1.3",
+		"label" : "menu 1.3",
+		"submenus": [
+		{
+			"id" : "1.3.1",
+			"label" : "menu 1.3.1"
+		},
+		{
+			"id" : "1.3.2",
+			"label" : "menu 1.3.2"
+		},
+		{
+			"id" : "1.3.3",
+			"label" : "menu 1.3.3"
+		}
+		]
+	}
+	]
+},
+{
+	"id" : "2",
+	"label" : "J'arrive'",
+	"icon" : "download",
+	"submenus": [
+	{
+		"id" : "2.1",
+		"label" : "menu 2.1",
+		"submenus": [
+		{
+			"id" : "2.1.1",
+			"label" : "menu 2.1.1"
+		},
+		{
+			"id" : "2.1.2",
+			"label" : "menu 2.1.2"
+		},
+		{
+			"id" : "2.1.3",
+			"label" : "menu 2.1.3"
+		}
+		]
+	},
+	{
+		"id" : "2.2",
+		"label" : "menu 2.2",
+		"submenus": [
+		{
+			"id" : "2.2.1",
+			"label" : "menu 2.2.1"
+		},
+		{
+			"id" : "2.2.2",
+			"label" : "menu 2.2.2"
+		},
+		{
+			"id" : "2.2.3",
+			"label" : "menu 2.2.3"
+		}
+		]
+	},
+	{
+		"id" : "2.3",
+		"label" : "menu 2.3",
+		"submenus": [
+		{
+			"id" : "2.3.1",
+			"label" : "menu 2.3.1"
+		},
+		{
+			"id" : "2.3.2",
+			"label" : "menu 2.3.2"
+		},
+		{
+			"id" : "2.3.3",
+			"label" : "menu 2.3.3"
+		}
+		]
+	}
+	]
+}
+]

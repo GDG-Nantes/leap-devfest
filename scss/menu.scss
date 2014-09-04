@@ -1,0 +1,162 @@
+@charset "UTF-8";
+@import "compass";
+@import "colors";
+
+
+$width-block : 300px;
+
+
+#menu{
+    z-index: -100;
+}
+
+#menu > ul{
+    border-left: solid 10px $color-select;
+}
+
+#menu ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 100vh;
+    overflow: hidden;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay : 0s;
+}
+
+#menu ul.activ{
+    width: $width-block;
+    overflow: inherit;
+    border-left: solid 0px $color-select;
+}
+
+#menu ul ul{
+    left: $width-block;
+}
+
+
+
+
+#menu li{
+    border: solid $bg-color 10px;
+    color: $font-color;
+    text-align: center;
+    background-color: white;
+    /*-webkit-box-shadow: 0px 0px 5px 0px #656565;
+    box-shadow: 0px 0px 5px 0px #656565;*/
+}
+
+#menu li.hover{
+    color: white;
+    background-color: $color-select;
+}
+
+#menu li.hover:after{
+    font-family: FontAwesome;
+    font-size: 4em;
+    content: '\f105';
+    position: relative;
+    right: -93px;
+    top: 20px;
+    line-height: 0;
+}
+
+#menu div.li_niv_0_content {
+    position: relative;
+    height: 100%;
+
+    div.title{
+        position: absolute;
+        bottom: 20px;
+        line-height: 0;
+        font-size: 30px;
+        width: 100%;
+    }
+
+    .icon{
+        text-align: center;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        top: 50%;
+        margin-top: -0.5em;
+        font-size: 8em;
+    }
+
+}
+
+#menu li.li_niv_1.hover:after{
+    right: -90px;
+    top: 0;
+}
+
+.valid-div{
+    position: relative;
+    color: white;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+li.move.last > .valid-div:after {
+    font-family: FontAwesome;
+    font-size: 2em;
+    content: '\f046';
+    background-color: $color-select;
+    color: white;
+    width: 1.5em;
+    top: 20px;
+    right: -1.5em;
+    height: 100%;
+    position: absolute;
+}
+
+.bg-last-li{
+    position: relative;
+    height: 100%;
+    left: 0;
+    background-color: $color-select;
+}
+
+.bg-last-li.move:after{
+    font-family: FontAwesome;
+    font-size: 4em;
+    content: '\f101';
+    right: -1.5em;
+    position: absolute;
+}
+
+
+#menu .titre{
+    font-size: 30px;
+}
+
+/*
+* 
+* MIXINS
+**/
+
+@mixin height-mixin-percent($size){
+    .h-#{$size}{
+        height: calc((100% / #{$size}) - 20px);
+        line-height: (100vh/$size);
+    }
+
+    .top-#{$size}{
+        top: -(100vh/$size);
+    }
+
+    .top-db-#{$size}{
+        top: -((100vh/$size)*2);
+    }
+}
+
+@for $i from 1 through 10{
+    @include height-mixin-percent($i);
+}
