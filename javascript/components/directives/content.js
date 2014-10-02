@@ -15,7 +15,7 @@ components.directive('content', ['$rootScope', '$timeout'
           }
      });
 
-     $scope.$watch('frame', function(frame, oldFrame){
+     /*$scope.$watch('frame', function(frame, oldFrame){
         var showLegende = true;
         if (frame.hands && frame.hands.length === 1 && frame.hands[0].fingers.length === 5 && !video.paused){
           
@@ -23,7 +23,7 @@ components.directive('content', ['$rootScope', '$timeout'
 
           
          $scope.showLegende = showLegende;
-      });
+      });*/
 
       $rootScope.$on('itemSelectEvent', function(evt,data){
         if (timestamp === 0){

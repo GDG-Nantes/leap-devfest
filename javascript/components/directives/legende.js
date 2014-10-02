@@ -8,10 +8,10 @@ components.directive('legende', ['$rootScope'
     scope: true,    
     link: function postLink($scope, iElement, iAttrs, leapCtrl) { 
 
-      $scope.showLegende = true;
+      $scope.showLegende = false;
 
      
-      $scope.$watch('frame', function(frame, oldFrame){
+      /*$scope.$watch('frame', function(frame, oldFrame){
         var showLegende = true;
         if (frame.hands && frame.hands.length > 0 && frame.hands[0].fingers.length > 0){
           var hand = frame.hands[0];
@@ -22,7 +22,7 @@ components.directive('legende', ['$rootScope'
 
           
          $scope.showLegende = showLegende && !$scope.model.playVideo;
-      });
+      });*/
 
      
 

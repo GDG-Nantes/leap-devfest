@@ -102,7 +102,7 @@ components.directive('menuNavigation', ['$rootScope', '$http'
 
       });
 
-      $scope.$watch('frame', function(frame, oldFrame){
+      /*$scope.$watch('frame', function(frame, oldFrame){
 
         if (frame.hands && frame.hands.length > 0 && frame.hands[0].fingers.length > 0){
           var hand = frame.hands[0];
@@ -114,7 +114,7 @@ components.directive('menuNavigation', ['$rootScope', '$http'
 
         }
 
-      });
+      });*/
 
 
       function manageInteractions(fingerPos, ul, ulElements, liElements){

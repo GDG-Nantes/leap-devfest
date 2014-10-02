@@ -14,7 +14,7 @@ components.directive('screenOpacity', ['$rootScope'
         */        
 
 
-        $scope.$watch('frame', function(frame, oldFrame){
+        /*$scope.$watch('frame', function(frame, oldFrame){
           var alpha_lumiere=0.5;
           if (frame.hands && frame.hands.length > 0 && frame.hands[0].fingers.length > 0){
             var hand = frame.hands[0];
@@ -26,7 +26,7 @@ components.directive('screenOpacity', ['$rootScope'
 
           
           iElement.css('backgroundColor', 'rgba(0,0,0,'+(alpha_lumiere)+')');
-        });
+        });*/
 
 
         
