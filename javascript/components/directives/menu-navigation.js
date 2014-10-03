@@ -113,8 +113,11 @@ components.directive('menuNavigation', ['$rootScope', '$http','$q'
           }else{
             index = 3;
           }
+          speaker.id = 'speakers.'+speakerId;
           speaker.label = speaker.name;
-          speakerMenu.submenus[index].submenus.push(speaker);
+          if (speaker.show){
+            speakerMenu.submenus[index].submenus.push(speaker);
+          }
         }
 
         for (var i=0; i < sessionsJson.sessions.length; i++){
