@@ -1,12 +1,11 @@
-components.directive('menuNavigation', ['$rootScope', '$http'
-  ,function ($rootScope, $http) {
+components.directive('menuNavigation', ['$rootScope', '$http','$q'
+  ,function ($rootScope, $http,$q) {
    var directiveDefinitionObject = {
     templateUrl: 'partials/components/menu-navigation.html',
     replace: true,
     restrict: 'E',
-    require :'^leapController',
     scope: true,    
-    link: function postLink($scope, iElement, iAttrs, leapCtrl) { 
+    link: function postLink($scope, iElement, iAttrs) { 
 
       var ul = null,
         ulElements = null,
@@ -16,14 +15,176 @@ components.directive('menuNavigation', ['$rootScope', '$http'
         limitLastLI = 0,
         menuDataText = {};
 
+      $q.all([$http.get('./assets/json/speakers.json')
+        ,$http.get('./assets/json/sessions.json')])
+      .then(function success(results){
+        var speakerJson = results[0].data;
+        var sessionsJson = results[1].data;
+
+        var speakerMenu = {
+          id:'speakers',
+          label : 'Speakers',
+          icon : 'users',
+          submenus : [{
+            id:'speakers.mobile',
+            label:'Mobile',
+            submenus : []
+          },
+          {
+            id:'speakers.web',
+            label:'Web',
+            submenus : []
+          },
+          {
+            id:'speakers.cloud',
+            label:'Cloud',
+            submenus : []
+          },
+          {
+            id:'speakers.discovery',
+            label:'Découverte',
+            submenus : []
+          }]
+          };
+
+        var sessionsMenu = {
+          id:'confs',
+          label : 'Conférences',
+          icon : 'bullhorn',
+          submenus : [{
+            id:'confs.mobile',
+            label:'Mobile',
+            submenus : []
+          },
+          {
+            id:'confs.web',
+            label:'Web',
+            submenus : []
+          },
+          {
+            id:'confs.cloud',
+            label:'Cloud',
+            submenus : []
+          },
+          {
+            id:'confs.discovery',
+            label:'Découverte',
+            submenus : []
+          }]
+          };
+
+        var statsMenu = {
+          id:'stats',
+          label : 'Statistiques',
+          icon : 'pie-chart',
+          submenus : [{
+            id : "stats.2013",
+            label : "Statistiques 2013",
+            submenus: []
+          },
+          {
+            id : "stats.2014",
+            label : "Statistiques 2014",
+            submenus: [
+            {
+              "id" : "stats.2014.cfp",
+              "label" : "CFP"
+            },
+            {
+              "id" : "stats.2014.participants",
+              "label" : "Participants"
+            }
+            ]
+          }]
+          };
+
+        // Creation du menu
+        var keysSpeakers = Object.keys(speakerJson);        
+        for (var i=0; i < keysSpeakers.length; i++){
+          var speakerId = keysSpeakers[i];
+          var speaker = speakerJson[speakerId];
+          var index = 0;
+          if (speaker.type === 'mobile'){
+            index = 0;
+          }else if (speaker.type === 'web'){
+            index = 1;
+          }else if (speaker.type === 'cloud'){
+            index = 2;
+          }else{
+            index = 3;
+          }
+          speaker.label = speaker.name;
+          speakerMenu.submenus[index].submenus.push(speaker);
+        }
+
+        for (var i=0; i < sessionsJson.sessions.length; i++){
+          var session = sessionsJson.sessions[i];
+          var index = -1;
+          if (session.type === 'mobile'){
+            index = 0;
+          }else if (session.type === 'web'){
+            index = 1;
+          }else if (session.type === 'cloud'){
+            index = 2;
+          }else if (session.type === 'discovery'){
+            index = 3;
+          }
+          if (index != -1){            
+            session.label = session.title;
+            sessionsMenu.submenus[index].submenus.push(session);
+          }
+        }
+
+         $scope.menus = [speakerMenu, sessionsMenu, statsMenu];
+
+         for (var indexLevel0 = 0; indexLevel0 < $scope.menus.length; indexLevel0++){
+          var level0 = $scope.menus[indexLevel0];
+          menuDataText[level0.id] = level0.label;
+          if (level0.submenus.length>0){
+            for (var indexLevel1 = 0; indexLevel1 < level0.submenus.length; indexLevel1++){
+              var level1 = level0.submenus[indexLevel1];
+              menuDataText[level1.id] = level1.label;
+              if (level1.submenus.length>0){
+                for (var indexLevel2 = 0; indexLevel2 < level1.submenus.length; indexLevel2++){
+                  var level2 = level1.submenus[indexLevel2];
+                  menuDataText[level2.id] = level2.label;
+                }
+              }
+            }
+          }
+        }
+
+      }, function error(errors){
+
+      });
+      
+
       $http({
           url: './assets/json/menu.json',
           method: "GET"
       }).success(function(data, status, headers, config) {
+        //$scope.menus = data;
+
+        /*for (var indexLevel0 = 0; indexLevel0 < data.length; indexLevel0++){
+          var level0 = data[indexLevel0];
+          menuDataText[level0.id] = level0.label;
+          if (level0.submenus.length>0){
+            for (var indexLevel1 = 0; indexLevel1 < level0.submenus.length; indexLevel1++){
+              var level1 = level0.submenus[indexLevel1];
+              menuDataText[level1.id] = level1.label;
+              if (level1.submenus.length>0){
+                for (var indexLevel2 = 0; indexLevel2 < level1.submenus.length; indexLevel2++){
+                  var level2 = level1.submenus[indexLevel2];
+                  menuDataText[level2.id] = level2.label;
+                }
+              }
+            }
+          }
+        }*/
         
 
         // Création du niveau 0
-        var ulNiv = document.createElement('ul');
+        /*var ulNiv = document.createElement('ul');
         ulNiv.classList.add('ul_niv_0');
         iElement[0].appendChild(ulNiv);            
 
@@ -94,7 +255,7 @@ components.directive('menuNavigation', ['$rootScope', '$http'
       
         liElements = document.querySelectorAll('#menu li');
         ulElements = document.querySelectorAll('#menu ul');
-        ul = document.querySelector('#menu > ul');
+        ul = document.querySelector('#menu > ul');*/
 
       }).error(function(data, status, headers, config) {
         
@@ -102,24 +263,24 @@ components.directive('menuNavigation', ['$rootScope', '$http'
 
       });
 
-      /*$scope.$watch('frame', function(frame, oldFrame){
+      $scope.$watch('leapState', function(leapState, oldLeapState){
 
-        if (frame.hands && frame.hands.length > 0 && frame.hands[0].fingers.length > 0){
-          var hand = frame.hands[0];
-          var handPos = leapCtrl.leapToSceneHand(frame,hand.palmPosition,hand.palmNormal,hand.direction);
-          var finger = hand.fingers[0];
-          var fingerPos = leapCtrl.leapToSceneFinger(frame,finger.tipPosition);
-
-          manageInteractions(fingerPos, ul, ulElements, liElements);
-
+        if (leapState.handActive){          
+          manageInteractions(leapState.fingerPos, ul, ulElements, liElements);
         }
 
-      });*/
+      },true);
 
 
       function manageInteractions(fingerPos, ul, ulElements, liElements){
         var xLeap = fingerPos[0],
             yLeap = fingerPos[1];
+
+        if (!ul){
+          liElements = document.querySelectorAll('#menu li');
+          ulElements = document.querySelectorAll('#menu ul');
+          ul = document.querySelector('#menu > ul');
+        }
 
         // Initialisation du menu
         if (xLeap < 100){        

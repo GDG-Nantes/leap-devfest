@@ -6,7 +6,14 @@
  */
 main.controller('HomeCtrl', ['$scope', function($scope) {
 
-    $scope.titre = 'Template applicatif AngularJS ! ';
-    $scope.model.showVideo = false;
+    $scope.hand = {};    
+    $scope.model ={
+      menuActiv : false,
+      showLegende : true
+    };
+    $scope.leapState = {
+    	fingerPos : [0,0,0],
+    	handActive : false
+    };
 
 }]);

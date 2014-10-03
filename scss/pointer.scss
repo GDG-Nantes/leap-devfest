@@ -23,18 +23,9 @@ $diam : 50px;
     height: $diam;
     border-radius: $diam;
     background-color: rgba(255,255,255,0.7);
-    transform : translateZ(500px);
-    -webkit-transform : translateZ(500px);
-}
-
-#pointerShadow{
-    position: absolute;
-    width: $diam;
-    height: $diam;
-    border-radius: $diam;
-    background-color: black;
-    transform : translateZ(-10px);
-    -webkit-transform : translateZ(-10px);
+    transform : translateZ(000px);
+    -webkit-transform : translateZ(000px);
     box-shadow: 0 0 40px black;
     -webkit-box-shadow: 0 0 40px black;
 }
+

@@ -1,2 +1,22 @@
-<div id="menu">
+<div id='menu'>
+	<ul class='ul_niv_0'>
+		<li ng-repeat='level0 in menus' class='li_niv_0 h-{{menus.length}}' id='{{level0.id}}'>
+			<div class='li_niv_0_content'>
+				<div class='title'>{{level0.label}}</div>
+				<div class='icon fa fa-5x fa-{{level0.icon}}'></div>
+			</div>
+			<ul ng-if='level0.submenus' class='ul_niv_1'>
+				<li ng-repeat='level1 in level0.submenus' class='li_niv_1 h-{{level0.submenus.length}}' id='{{level1.id}}'>
+					{{level1.label}}
+					<ul ng-if='level1.submenus' class='ul_niv_2'>
+						<li ng-repeat='level2 in level1.submenus' class='li_niv_2 h-{{level1.submenus.length}} last' id='{{level2.id}}'>
+							{{level2.label}}
+							<div class='bg-last-li top-{{level1.submenus.length}}'></div>
+							<div class='valid-div top-db-{{level1.submenus.length}}'></div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</li>
+	</ul>
 </div>       

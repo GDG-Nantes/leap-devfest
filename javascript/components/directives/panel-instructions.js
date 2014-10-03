@@ -3,10 +3,9 @@ components.directive('panelInstructions', ['$rootScope'
    var directiveDefinitionObject = {
     templateUrl: 'partials/components/panel-instructions.html',
     replace: true,
-    require :'^leapController',
     restrict: 'E',
     scope: false,    
-    link: function postLink($scope, iElement, iAttrs, leapCtrl) { 
+    link: function postLink($scope, iElement, iAttrs) { 
 
 
       $scope.$watch('frame', function(frame, oldFrame){

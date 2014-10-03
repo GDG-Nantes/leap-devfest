@@ -3,10 +3,9 @@ components.directive('screenOpacity', ['$rootScope'
    var directiveDefinitionObject = {
     templateUrl: 'partials/components/screen-opacity.html',
     replace: true,
-    require :'^leapController',
     restrict: 'E',
     scope: false,    
-    link: function postLink($scope, iElement, iAttrs, leapCtrl) { 
+    link: function postLink($scope, iElement, iAttrs) { 
 
 
        /*

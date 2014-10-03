@@ -3,12 +3,9 @@ components.directive('legende', ['$rootScope'
    var directiveDefinitionObject = {
     templateUrl: 'partials/components/legende.html',
     replace: true,
-    require :'^leapController',
     restrict: 'E',
-    scope: true,    
-    link: function postLink($scope, iElement, iAttrs, leapCtrl) { 
-
-      $scope.showLegende = false;
+    scope: false,    
+    link: function postLink($scope, iElement, iAttrs) { 
 
      
       /*$scope.$watch('frame', function(frame, oldFrame){
