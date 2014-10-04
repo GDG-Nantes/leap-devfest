@@ -4,6 +4,7 @@
 
 
 $width-block : 300px;
+$width-block-last : 500px;
 
 
 #menu{
@@ -35,6 +36,9 @@ $width-block : 300px;
     overflow: inherit;
     border-left: solid 0px $color-select;
 }
+#menu ul.ul_niv_2.activ{
+    width: $width-block-last;
+}
 
 #menu ul ul{
     left: $width-block;
@@ -55,6 +59,19 @@ $width-block : 300px;
 #menu li.hover{
     color: white;
     background-color: $color-select;
+}
+
+#menu #speakers-mobile.hover, #menu #confs-mobile.hover{
+    background-color: $green-gdg-color;
+}
+#menu #speakers-cloud.hover, #menu #confs-cloud.hover{
+    background-color: $blue-gdg-color;
+}
+#menu #speakers-web.hover, #menu #confs-web.hover{
+    background-color: $yellow-gdg-color;
+}
+#menu #speakers-discovery.hover, #menu #confs-discovery.hover{
+    background-color: $red-gdg-color;
 }
 
 #menu li.hover:after{
@@ -91,9 +108,25 @@ $width-block : 300px;
 
 }
 
+#menu li.li_niv_1{
+    font-size: 2em;
+    /*position: relative;*/
+}
+
 #menu li.li_niv_1.hover:after{
-    right: -90px;
-    top: 0;
+    /*position: absolute;*/
+    right: -65px;    
+    top: 30px;
+}
+
+#menu li.li_niv_2{
+    font-size: 0.75em;
+
+    .overflow-text{        
+        overflow: hidden;
+        text-overflow : ellipsis;
+        white-space: nowrap;
+    }
 }
 
 .valid-div{

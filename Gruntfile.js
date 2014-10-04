@@ -96,6 +96,6 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
   
   // Declaration des taches
-  grunt.registerTask('serve',        ['http-server:dev', 'watch']);
+  grunt.registerTask('serve',        ['compass', 'http-server:dev', 'watch']);
   
 };

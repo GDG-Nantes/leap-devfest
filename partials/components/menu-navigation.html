@@ -10,7 +10,8 @@
 					{{level1.label}}
 					<ul ng-if='level1.submenus' class='ul_niv_2'>
 						<li ng-repeat='level2 in level1.submenus' class='li_niv_2 h-{{level1.submenus.length}} last' id='{{level2.id}}'>
-							{{level2.label}}
+							<div class="overflow-text">{{level2.label}}</div>	
+							<div ng-if="level2.photo" class="img-speaker circular-img-xs {{level2.photo}}"></div>
 							<div class='bg-last-li top-{{level1.submenus.length}}'></div>
 							<div class='valid-div top-db-{{level1.submenus.length}}'></div>
 						</li>

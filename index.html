@@ -15,7 +15,19 @@
 </head>
 <body>
 
-  <div ng-view leap-controller></div>
+  <div leap-controller ng-controller="MainCtrl">
+    <div >
+      <panel-instructions></panel-instructions>
+      <fil-ariane></fil-ariane>
+      <menu-navigation></menu-navigation> 
+      <pointer-leap></pointer-leap>
+      <screen-opacity></screen-opacity>
+      <legende></legende>
+      <content></content>
+    </div>
+    <div ng-view>
+    </div>
+  </div>
 
   <!-- build:js(src/main/webapp) javascript/app.js -->
   <script src="bower_components/underscore/underscore.js"></script>
@@ -46,6 +58,10 @@
   <!-- Module Borne IV -->
   <script src="javascript/main/main.js"></script>
   <script src="javascript/main/controllers/main.js"></script>
+  <script src="javascript/main/controllers/home.js"></script>
+  <script src="javascript/main/controllers/speaker.js"></script>
+  <script src="javascript/main/controllers/conf.js"></script>
+  <script src="javascript/main/controllers/stats.js"></script>
   <!-- endbuild -->
 
 </body>
