@@ -3,7 +3,7 @@
 /**
  * L'application
  */
-angular.module('devfestleap', ['devfestleap.main', 'devfestleap.components', 'ngRoute'])
+angular.module('devfestleap', ['devfestleap.main', 'devfestleap.components', 'ngRoute', 'ngSanitize'])
 
 /**
  * Definition des routes applicatives

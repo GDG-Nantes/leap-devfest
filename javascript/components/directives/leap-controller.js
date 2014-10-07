@@ -32,12 +32,14 @@ components.directive('leapController', ['$rootScope'
         .use('handEntry')
         .on('handFound', function(hand){
           $scope.$apply(function(){
+              $scope.timeout = new Date().getTime();
               $scope.leapState.handActive = true;
           });
           console.log('found Hand');
         })
         .on('handLost', function(hand){
           $scope.$apply(function(){
+              $scope.timeout = new Date().getTime();
               $scope.leapState.handActive = false;
           });
           console.log('lost Hand');

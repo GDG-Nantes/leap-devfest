@@ -1,5 +1,7 @@
+@import "colors";
 
 $size-cirular-xs : 70px;
+$size-cirular : 200px;
 
 .circular-img-xs {
 	width: $size-cirular-xs;
@@ -11,6 +13,89 @@ $size-cirular-xs : 70px;
 	left: 20px;
 	top: -50%;
 	margin-top: -$size-cirular-xs;
+}
+
+.circular-img {
+	width: $size-cirular;
+	height: $size-cirular;
+	border-radius: $size-cirular / 2;
+	-webkit-border-radius: $size-cirular / 2;
+	-moz-border-radius: $size-cirular / 2;
+	position: relative;
+	left: 20px;
+	top: 50px;
+	margin-top: -$size-cirular;
+}
+
+#speaker{
+	padding : 50px 100px;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	color: white;
+
+	.header-speaker, .content-speaker{
+		width: 100%;		
+		height: 100%;		
+		position: absolute;
+	}
+	
+	.header-speaker{
+
+
+		.img-speaker{
+			position: absolute;
+			top:$size-cirular;
+			z-index: 2;
+		}
+
+		h1{
+			font-size: 4em;
+			margin: 0;
+			position: absolute;
+			height: $size-cirular;
+			line-height: $size-cirular;
+			width: 800px;
+			top: 0;
+			left: ($size-cirular / 2);
+			padding-left: ($size-cirular / 2) + 50px;
+			border-top-right-radius: $size-cirular / 2;
+			border-bottom-right-radius: $size-cirular / 2;
+		}
+
+		.img-speaker.mobile ~ h1{
+			background-color: $green-gdg-color;
+		}
+		.img-speaker.cloud ~ h1{
+			background-color: $blue-gdg-color;
+		}
+		.img-speaker.web ~ h1{
+			background-color: $yellow-gdg-color;
+		}
+		.img-speaker.discovery ~ h1{
+			background-color: $red-gdg-color;
+		}
+
+	}
+
+	.content-speaker{
+		top: $size-cirular + 100px;
+		p{
+			font-size: 2em;
+		}
+
+		h2{
+			font-size: 2em;
+		}
+
+		.bio{
+			width: 1200px;
+		}
+	
+
+
+	}
+
 }
 
 .img-alopez {

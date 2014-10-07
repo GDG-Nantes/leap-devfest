@@ -8,7 +8,8 @@ $width-block-last : 500px;
 
 
 #menu{
-    z-index: -100;
+    position: absolute;
+    z-index: 100;
 }
 
 #menu > ul{
