@@ -13,11 +13,12 @@ main.controller('SpeakerCtrl', ['$scope', '$location',
 				var regExp = /speakers\-(.*)/;
 				$scope.speaker = $scope.speakerJson[regExp.exec($location.search().id)[1]];			
 			}catch(e){
-
+				
 				$location.path('/home');
 			}
 			
 		}else{
+			
 			$location.path('/home');
 		}
 

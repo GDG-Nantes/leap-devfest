@@ -1,2 +1,17 @@
-<div>
+<div id="conf">
+	<div class="contain-conf">
+		<div class="header-conf {{conf.type}}">
+			<i class="fa fa-{{conf.fa}}"></i>
+			<h1>{{conf.title}}</h1>
+		</div>
+		<div class="content-conf">
+			<h2><u>Description : </u></h2>
+			<p ng-bind-html="conf.desc" class="bio"></p>
+			<h2><u>Speakers : </u></h2>
+			<p ng-repeat="speaker in session.speakersArray" class="conf-hours">{{speaker.name}}</p>
+			<h2><u>Horaires & Salle : </u></h2>
+			<p class="conf-hours">{{session.hour.hourStart}}h{{session.hour.minStart}}-
+			{{session.hour.hourEnd}}h{{session.hour.minEnd}} : {{session.confRoom}}</p>
+		</div>
+	</div>
 </div>

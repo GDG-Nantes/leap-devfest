@@ -8,7 +8,7 @@ main.factory('Request', ['$q', '$http', '$rootScope',
         ,$http.get('./assets/json/hours.json')])
       .then(function success(results){
         var speakerJson = results[0].data;
-        var sessionsJson = results[1].data;
+        var sessionsData = results[1].data;
         var hoursJson = results[2].data;
 
         var speakerMenu = {
@@ -33,6 +33,7 @@ main.factory('Request', ['$q', '$http', '$rootScope',
           {
             id:'speakers-discovery',
             label:'Découverte',
+            directLast : true,
             submenus : []
           }]
           };
@@ -114,8 +115,11 @@ main.factory('Request', ['$q', '$http', '$rootScope',
           }
         }
 
-        for (var i=0; i < sessionsJson.sessions.length; i++){
-          var session = sessionsJson.sessions[i];
+        var sessionsJson = {};
+        var mappingSessionSpeakers = {};
+        for (var i=0; i < sessionsData.sessions.length; i++){
+          var session = sessionsData.sessions[i];
+          sessionsJson[session.id] = session;
           var index = -1;
           if (session.type === 'mobile'){
             index = 0;
@@ -127,10 +131,18 @@ main.factory('Request', ['$q', '$http', '$rootScope',
             index = 3;
           }
           if (index != -1){            
+            session.sessionId = session.id;
+            session.id = 'confs-'+session.id;
             session.label = session.title;
             session.hour = hoursJson[session.hour];
+            session.speakersArray = [];
             for (var indexSpeaker = 0; indexSpeaker < session.speakers.length; indexSpeaker++){
             	var speaker = speakerJson[session.speakers[indexSpeaker]];
+              session.speakersArray.push({
+                id : speaker.id,
+                name : speaker.name,
+                photo : speaker.photo
+              });
             	speaker.session = session;
             }
             sessionsMenu.submenus[index].submenus.push(session);

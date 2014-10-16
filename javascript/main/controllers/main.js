@@ -11,7 +11,8 @@ main.controller('MainCtrl', ['$scope', '$rootScope', '$location', '$interval','R
     $scope.model ={
       menuActiv : false,
       showLegende : true,
-      timeoutPassed : true
+      timeoutPassed : true,
+      mainScreen : true
     };
     $scope.leapState = {
     	fingerPos : [0,0,0],
@@ -21,11 +22,19 @@ main.controller('MainCtrl', ['$scope', '$rootScope', '$location', '$interval','R
 
     Request.callJson();
 
+    $scope.$on('$routeChangeStart', function(context, next, current){
+        $scope.model.mainScreen = !next || next.originalPath === '/home'; 
+        if ($scope.model.mainScreen){
+            $location.search({});
+        }
+    });
+
 
     $interval(function(){
         if ((new Date().getTime() - $scope.timeout) > 60 * 1000){
             console.log('passed');
             $scope.model.timeoutPassed = true;
+            
             $location.path('home');
         }else if (!$scope.handActive){
             console.log('not passed');
@@ -36,7 +45,8 @@ main.controller('MainCtrl', ['$scope', '$rootScope', '$location', '$interval','R
         }
     }, 1000);
 
-    $rootScope.$on('itemSelectEvent', function selectElement(event, data){        
+    $rootScope.$on('itemSelectEvent', function selectElement(event, data){      
+        console.log(data);  
         if (/speakers.*/.test(data.id)){
     		$location.path('speaker').search({id : data.id});
     	}else if (/confs.*/.test(data.id)){

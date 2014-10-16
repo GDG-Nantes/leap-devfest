@@ -1,0 +1,83 @@
+@import "colors";
+@import "speaker";
+
+
+#conf{
+	padding : 50px 100px;
+	width: 100%;
+	height: 100%;
+	position: relative;
+	color: white;
+
+	.header-conf, .content-conf{
+		width: 100%;		
+		height: 100%;		
+		position: absolute;
+	}
+	
+	.header-conf{
+
+
+		.img-speaker{
+			position: absolute;
+			top:$size-cirular;
+			z-index: 2;
+		}
+
+		i{
+			position: absolute;
+			font-size: 5em;
+			top: ($size-cirular / 4);
+			left: (($size-cirular * 3) /4) - 20px;
+			z-index: 2;
+		}
+
+		h1{
+			font-size: 3em;
+			margin: 0;
+			position: absolute;
+			height: $size-cirular;
+			line-height: 2em;
+			width: 800px;
+			top: 0;
+			left: ($size-cirular / 2);
+			padding-left: ($size-cirular / 2) + 50px;
+			border-radius: $size-cirular / 2;
+		}
+
+
+	}
+
+	.header-conf.mobile  h1{
+		background-color: $green-gdg-color;
+	}
+	.header-conf.cloud  h1{
+		background-color: $blue-gdg-color;
+	}
+	.header-conf.web h1{
+		background-color: $yellow-gdg-color;
+	}
+	.header-conf.discovery h1{
+		background-color: $red-gdg-color;
+	}
+
+	.content-conf{
+		top: $size-cirular + 100px;
+		p{
+			font-size: 2em;
+		}
+
+		h2{
+			font-size: 2em;
+		}
+
+		.bio{
+			width: 1200px;
+		}
+	
+
+
+	}
+
+}
+
