@@ -2,6 +2,7 @@
 @import "speaker";
 
 
+
 #conf{
 	padding : 50px 100px;
 	width: 100%;
@@ -18,11 +19,7 @@
 	.header-conf{
 
 
-		.img-speaker{
-			position: absolute;
-			top:$size-cirular;
-			z-index: 2;
-		}
+		
 
 		i{
 			position: absolute;
@@ -33,7 +30,7 @@
 		}
 
 		h1{
-			font-size: 3em;
+			font-size: 2.5em;
 			margin: 0;
 			position: absolute;
 			height: $size-cirular;
@@ -64,15 +61,38 @@
 	.content-conf{
 		top: $size-cirular + 100px;
 		p{
-			font-size: 2em;
+			font-size: $font-size-content;
 		}
 
 		h2{
-			font-size: 2em;
+			font-size: $font-size-titles;
 		}
 
-		.bio{
+		.conf-speakers{
+			position: relative;
+			margin-bottom: 10px;
+		}
+
+		.img-speaker{
+			top:$size-cirular-xs;
+			display: inline-block;
+			top: $size-cirular-xs / 2;
+		}
+
+
+
+		.speaker-name{
+			display: inline-block;
+			height: $size-cirular-xs;
+			line-height: $size-cirular-xs;
+			position: relative;
+			font-size: $font-size-content;
+			left: $size-cirular-xs / 2;
+		}
+
+		.desc{
 			width: 1200px;
+			font-size: $font-size-content;
 		}
 	
 

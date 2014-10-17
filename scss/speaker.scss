@@ -2,6 +2,8 @@
 
 $size-cirular-xs : 70px;
 $size-cirular : 200px;
+$font-size-titles : 2em;
+$font-size-content : 1.3em;
 
 .circular-img-xs {
 	width: $size-cirular-xs;
@@ -81,11 +83,11 @@ $size-cirular : 200px;
 	.content-speaker{
 		top: $size-cirular + 100px;
 		p{
-			font-size: 2em;
+			font-size: $font-size-content;
 		}
 
 		h2{
-			font-size: 2em;
+			font-size: $font-size-titles;
 		}
 
 		.bio{

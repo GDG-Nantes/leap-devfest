@@ -6,12 +6,15 @@
 		</div>
 		<div class="content-conf">
 			<h2><u>Description : </u></h2>
-			<p ng-bind-html="conf.desc" class="bio"></p>
+			<p ng-bind-html="conf.desc" class="desc"></p>
 			<h2><u>Speakers : </u></h2>
-			<p ng-repeat="speaker in session.speakersArray" class="conf-hours">{{speaker.name}}</p>
+			<div ng-repeat="speaker in conf.speakersArray" class="conf-speakers">
+			<div class="img-speaker circular-img-xs {{speaker.photo}} {{speaker.type}}"></div>
+			<div class="speaker-name">{{speaker.name}}</div>
+			</div>
 			<h2><u>Horaires & Salle : </u></h2>
-			<p class="conf-hours">{{session.hour.hourStart}}h{{session.hour.minStart}}-
-			{{session.hour.hourEnd}}h{{session.hour.minEnd}} : {{session.confRoom}}</p>
+			<p class="conf-hours">{{conf.hour.hourStart}}h{{conf.hour.minStart}}-
+			{{conf.hour.hourEnd}}h{{conf.hour.minEnd}} : {{conf.confRoom}}</p>
 		</div>
 	</div>
 </div>
