@@ -8,7 +8,10 @@
 			<h2><u>Sa biographie : </u></h2>
 			<p ng-bind-html="speaker.bio" class="bio"></p>
 			<h2><u>Sa conférence : </u></h2>
+			<div>
 			<p class="title" ng-bind-html="speaker.session.title"></p>
+			<leap-selector leap-state='leapState' id='speaker.session.id'></leap-selector>
+			</div>
 			<h2><u>Horaires & Salle : </u></h2>
 			<p class="conf-hours">{{speaker.session.hour.hourStart}}h{{speaker.session.hour.minStart}}-
 			{{speaker.session.hour.hourEnd}}h{{speaker.session.hour.minEnd}} : {{speaker.session.confRoom}}</p>

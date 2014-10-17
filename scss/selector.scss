@@ -1,0 +1,102 @@
+@import "compass";
+@import "compass/css3";
+@import "compass/css3/animation";
+@import "colors";
+@import "vars";
+
+$animation-duration : 2s;
+$size-border : 10px;
+$size : $size-cirular-xs + (2 * $size-border);
+$color-bg : #444;
+$color-border : darken($color-select,20%);
+
+.over-leap{
+  top: $size-cirular-xs / 2;
+  left: $size-cirular-xs;
+  height: $size-cirular-xs;
+  width: $size-cirular-xs;
+  position: relative;
+  display: inline-block;
+
+  .bg{    
+    position: absolute;
+    top: 0;//$size-border;
+    left: $size-border;
+    z-index: 4;
+    background: $color-select;
+    color : white;
+    text-align: center;
+    font-size: 1.4em;
+    height: $size-cirular-xs;
+    width: $size-cirular-xs;
+    line-height: $size-cirular-xs;
+    border-radius: $size-cirular-xs;
+  }
+}
+
+
+
+.leap-selector-wrapper * { box-sizing:border-box; }
+
+
+.leap-selector-wrapper {
+  top: -(2 * $size-border);
+  width:$size;
+  height:$size;
+  border-radius: $size;
+  margin:10px auto;
+  position:relative;
+  background:$color-bg; 
+}
+
+.pie {
+  width: 50%;
+  height: 100%;
+  transform-origin: 100% 50%;
+  position: absolute;    
+  border: $size-border solid $color-border;
+}
+
+.spinner {
+  border-radius: 100% 0 0 100% / 50% 0 0 50%;
+  z-index: 2;
+  border-right:none;
+  @include animation(rota $animation-duration linear infinite);
+}
+
+.filler {
+  box-sizing:border-box;
+  border-radius: 0 100% 100% 0 / 0 50% 50% 0; 
+  left: 50%;
+  opacity: 0;
+  z-index: 1;
+  @include animation(fill $animation-duration steps(1,end) infinite);
+    
+  border-left: none;
+}
+
+.mask {
+  box-sizing:border-box;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background: inherit;
+  opacity: 1;
+  z-index: 3;
+  @include animation(mask $animation-duration steps(1,end) infinite);
+}
+
+@include keyframes(rota) {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@include keyframes(mask ){
+  0% { opacity: 1; }
+  50%, 100% { opacity: 0; }
+}
+
+@include keyframes(fill) {
+  0% { opacity: 0; }
+  50%, 100% { opacity: 1; }
+}

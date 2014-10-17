@@ -1,9 +1,6 @@
 @import "colors";
+@import "vars";
 
-$size-cirular-xs : 70px;
-$size-cirular : 200px;
-$font-size-titles : 2em;
-$font-size-content : 1.3em;
 
 .circular-img-xs {
 	width: $size-cirular-xs;
@@ -84,6 +81,10 @@ $font-size-content : 1.3em;
 		top: $size-cirular + 100px;
 		p{
 			font-size: $font-size-content;
+		}
+
+		.title{
+			display: inline-block;
 		}
 
 		h2{

@@ -1,5 +1,5 @@
 @import "colors";
-@import "speaker";
+@import "vars";
 
 
 
@@ -78,8 +78,6 @@
 			display: inline-block;
 			top: $size-cirular-xs / 2;
 		}
-
-
 
 		.speaker-name{
 			display: inline-block;
