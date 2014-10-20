@@ -174,7 +174,7 @@ components.directive('menuNavigation', ['$rootScope', '$http','$q'
                   var rect = element.getClientRects()[0];
                   var elementX = rect.left - 10;
                   var elementY = rect.top;
-                  var elementW = rect.left + 300 - 10;
+                  var elementW = rect.left + (element.directLast ? 800 : 500) - 10;
                   var elementH = rect.bottom;
                
                   liPositionMap[element.id] = {x1: elementX, y1: elementY, x2: elementW, y2: elementH};    

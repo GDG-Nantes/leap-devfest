@@ -62,6 +62,25 @@ $width-block-last : 500px;
     background-color: $color-select;
 }
 
+#menu li.li_niv_0{
+
+    width : $width-block;
+    transition-property: width;
+    transition-duration: 0.5s;
+    transition-timing-function: ease;
+    transition-delay : 0s;
+
+}
+
+#menu li.li_niv_0 > .bg-last-li{
+    margin-top: 20px;
+}
+
+
+#menu li.li_niv_0.move{
+    width: 800px;
+}
+
 #menu #speakers-mobile.hover, #menu #confs-mobile.hover{
     background-color: $green-gdg-color;
 }
@@ -138,7 +157,7 @@ $width-block-last : 500px;
     height: 100%;
 }
 
-li.move.last > .valid-div:after {
+li.move.last > .valid-div:after, li.move.last > .li_niv_0_content > .valid-div:after {
     font-family: FontAwesome;
     font-size: 2em;
     content: '\f046';

@@ -1,10 +1,12 @@
 <div id='menu'>
 	<ul class='ul_niv_0'>
-		<li ng-repeat='level0 in menus' class='li_niv_0 h-{{menus.length}}' id='{{level0.id}}'>
+		<li ng-repeat='level0 in menus' class='li_niv_0 h-{{menus.length}}' directLast="{{leve0.directLast}}" ng-class="{last : level0.directLast}" id='{{level0.id}}'>
 			<div class='li_niv_0_content'>
 				<div class='title'>{{level0.label}}</div>
 				<div class='icon fa fa-5x fa-{{level0.icon}}'></div>
-			</div>
+			</div>			
+			<div ng-if="level0.directLast" class="bg-last-li top-{{menus.length}}"></div>
+			<div ng-if="level0.directLast" class="valid-div  top-db-{{menus.length}}"></div>
 			<ul ng-if='level0.submenus' class='ul_niv_1'>
 				<li ng-repeat='level1 in level0.submenus' class='li_niv_1 h-{{level0.submenus.length}}' id='{{level1.id}}'>
 					{{level1.label}}

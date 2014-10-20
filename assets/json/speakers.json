@@ -25,7 +25,7 @@
     "show":true,
     "name":"Brian Dorsey",
     "title":"Developer Advocate<br>Cloud",
-    "bio":"BRIAN DORSEY is an engineer on the Google Developer Relations team. He helps you build cool stuff with Google Cloud Platform. Brian focuses on Compute Engine and Cloud Storage. He loves Python and he’s taught Python at the University of Washington & spoken at both PyCon & PyCon Japan. Brian is currently learning Go and enjoying it.",
+    "bio":"Brian Dorsey is an engineer on the Google Developer Relations team. He helps you build cool stuff with Google Cloud Platform. Brian focuses on Compute Engine and Cloud Storage. He loves Python and he’s taught Python at the University of Washington & spoken at both PyCon & PyCon Japan. Brian is currently learning Go and enjoying it.",
     "type":"cloud",
     "socials":[
       {"type":"twitter","url":"http://twitter.com/briandorsey"},
@@ -35,7 +35,7 @@
   "cbossard":{
     "show":true,
     "name":"Cécilia Bossard",
-    "title":"Développeuse<br>Agiliste",
+    "title":"Developer<br>Agile",
     "bio":"Cécilia a un but : aider les équipes à produire des logiciels utiles aux utilisateurs finaux. Pour cela, elle les accompagne en intégrant les équipes de développement ou en les assistant dans leur transition agile. <br>Impliquée dans la communauté agile nantaise, elle participe également à l'organisation de l'Agile Tour de Nantes.<br>Femme développeuse, elle est également co-fondatrice du groupe Women In Technology à Nantes, dont le but est de promouvoir les femmes dans la technique. Dans ce cadre, elle participe également aux initiations à la programmation à destination des enfants avec des initiatives telles que les Devoxx4Kids ou les coding goûters.",
     "type":"discovery",
     "socials":[
@@ -84,16 +84,15 @@
       ]
   },
   "dlecan":{
-    "show":false,
+    "show":true,
     "name":"Damien Lecan",
-    "title":"",
-    "bio":"",
+    "title":"Architect<br>Web & Mobile",
+    "bio":"Damien Lecan est une personnes aux multiples casquettes : architecte et développeur avec plus de 10 années d'expérience dans des domaines techniques variés tels que l'industrie, la banque, ... et aussi consultant et formateur senior pour le compte de sa société, SQLI.<br>Avec un fort penchant pour les technologies open-source, il y contribue au travers de nombreux projets au gré de ses activités : Android, Scala, HTML5/JS (écosystème AngularJS)... Passionné par le partage de la connaissance, il s'intéresse dernièrement aux problématiques associées à l'Internet de Objets et aux solutions à y apporter en Entreprise.",
     "type":"mobile",
     "socials":[
-      {"type":"twitter","url":""},
-      {"type":"google-plus","url":""},
-      {"type":"github-alt","url":""},
-      {"type":"globe","url":""}
+      {"type":"twitter","url":"http://twitter.com/dlecan"},
+      {"type":"github-alt","url":"http://github.com/dlecan"},
+      {"type":"globe","url":"http://blog.dlecan.com"}
       ]
   },
   "elezmy":{
@@ -134,7 +133,7 @@
   "fnoel":{
     "show":true,
     "name":"Florent Noël",
-    "title":"Android enthusiast <br> pragmatic programmer",
+    "title":"Pragmatic Programmer<br>Android",
     "bio":"Android enthusiast and pragmatic programmer, Florent is software developer at Genymobile.<br>Passionate about his work he often finds himself submerged into a world of zeros and ones. ",
     "type":"mobile",
     "socials":[      
@@ -155,6 +154,29 @@
       {"type":"globe","url":""}
       ]
   },
+  "ggirou":{
+    "show":true,
+    "name":"Guillaume Girou",
+    "title":"Technical Evangelist<br> Dart",
+    "bio":"Guillaume Girou est évangéliste Dart et est avant tout un développeur passioné ! Il change de langages comme de chemise, passant de .NET à Java, puis Scala et enfin Dart pour son plaisir ! Il co-anime la page Google+ Dartlang [FR] et a animé à plusieurs reprises des conférences et des workshops sur Dart.",
+    "type":"cloud",
+    "socials":[
+      {"type":"twitter","url":"https://twitter.com/GirouGuillaume"},
+      {"type":"google-plus","url":"https://plus.google.com/+GuillaumeGirou"},
+      {"type":"github-alt","url":"https://github.com/ggirou"},
+      {"type":"globe","url":"http://gplus.to/dartlangfr"}
+      ]
+  },
+  "gmenvielle":{
+    "show":true,
+    "name":"Gregory Menvielle",
+    "title":"Technical Evangelist<br> XDK",
+    "bio":"Gregory Menvielle  is the CEO and founder of Pyramedium, and is currently developing an HTML5 app called smartnotify (http://smartnotify.us/). Greg kindly consented to sitting down and giving us some information about his background, his current work, and his thoughts on HTML5.",
+    "type":"web",
+    "socials":[
+      {"type":"twitter","url":"https://twitter.com/pyramedium"}
+      ]
+  },
   "hgonzalez":{
     "show":true,
     "name":"Horacio Gonzalez",
@@ -168,17 +190,29 @@
       {"type":"globe","url":"http://lostinbrittany.org"}
       ]
   },
+  "jabrahamson":{
+    "show":true, 
+    "name":"Jeff Abrahamson",
+    "title":"Chief Scientist <br> Jellybooks",
+    "bio":"Jeff est développeur et passionné de l'apprentissage automatique et des données. Après avoir travaillé comme SRE chez Google, Jeff a plusieurs projets de création de startup, dont le plus important, Jellybooks, est destiné à révolutionner la vente en ligne du livre.",
+    "type":"discovery",
+    "socials":[
+      {"type":"twitter","url":"https://twitter.com/Jeff_Abrahamson"},
+      {"type":"google-plus","url":"https://www.google.com/+JeffAbrahamson"},
+      {"type":"github-alt","url":"https://github.com/JeffAbrahamson"},
+      {"type":"globe","url":"http://jeff.purple.com/qr/"}
+      ]
+  },
   "jdramaix":{
-    "show":false,
+    "show":true, 
     "name":"Julien Dramaix",
-    "title":"",
-    "bio":"",
+    "title":"GWT Contributor <br> Web",
+    "bio":"Julien is a Software Architect with ArcBees, the company behind GWT-Platform. In his everyday job, he helps people around the world to use GWT (formerly known as Google Web Toolkit) to implement their web applications.<br>An open source enthusiast, he spends his nights contributing to GWT and in a number of related projects (GQuery, GwtChosen, GwtQuery Drag-and-drop plugin, etc).<br>He is an official GWT maintainer and represents ArcBees to the GWT steering committee.<br>He is from Belgium and as such, likes drinking beer!",
     "type":"web",
     "socials":[
-      {"type":"twitter","url":""},
-      {"type":"google-plus","url":""},
-      {"type":"github-alt","url":""},
-      {"type":"globe","url":""}
+      {"type":"twitter","url":"http://twitter.com/jdramaix"},
+      {"type":"google-plus","url":"https://www.google.com/+JulienDramaix"},
+      {"type":"github-alt","url":"https://github.com/jDramaix"}
       ]
   },
   "jdubois":{
@@ -219,7 +253,7 @@
   "jpalies":{
     "show":true,
     "name":"Jean Paliès",
-    "title":"Expert technique en développement",
+    "title":"Expert Technique<br>Java & MDE",
     "bio":"Je suis un développeur, à Nantes. Je suis aussi cofondateur des WIT et des Coding Goûters à Nantes. Je participe dès que je le peux aux Devoxx4Kids.",
     "type":"discovery",
     "socials":[
@@ -257,7 +291,7 @@
     "name":"Manuel Boillod",
     "title":"Architecte<br>Java & Web",
     "bio":"Manuel Boillod est architecte et responsable de développements au sein des équipes R&D Restlet. Ses diverses expériences pour des grands comptes ou pour des startups et dans le service, lui ont permis d'appréhender de nombreuses technologies : Java, Javascript, Web, NoSQL…  Manuel est également leader du Nantes JUG (nantesjug.org) et aime échanger autour des projets et technologies innovantes.",
-    "type":"discovery",
+    "type":"cloud",
     "socials":[
       {"type":"twitter","url":"http://twitter.com/mboillod"}
       ]
@@ -271,6 +305,19 @@
     "socials":[
       {"type":"google-plus","url":"https://plus.google.com/u/0/+MartinGorner"},
       {"type":"github-alt","url":"https://github.com/martin-gorner"}
+      ]
+  },
+  "nfrancois":{
+    "show":true,
+    "name":"Nicolas Francois",
+    "title":"Technical Evangelist<br>Dart",
+    "bio":"Développeur Java pendant le jour, mais aussi Dart Night codeur Séduit par le langage, il évangélise depuis 2 ans les JUG et GDG avec Guillaume Girou.<br>Avec Vincent Bostoen, comme les 3 mousquetaires, ils animent une page Google+ en français à propos de l’actualité de Dart. ",
+    "type":"cloud",
+    "socials":[
+      {"type":"twitter","url":"http://twitter.com/nicofrancois"},
+      {"type":"google-plus","url":"http://plus.google.com/+NicolasFrancois"},
+      {"type":"github-alt","url":"http://github.com/nfrancois/"},
+      {"type":"globe","url":"http://gplus.to/dartlangfr"}
       ]
   },
   "pcans":{
@@ -310,7 +357,7 @@
   "rguilloux":{
     "show":true,
     "name":"Ronan Guilloux",
-    "title":"Enthusiastic learner<br>Passionate developer",
+    "title":"Enthusiastic Learner<br>Passionate Developer",
     "bio":"Développeur web depuis 1998, Ronan Guilloux est responsable technique dans une agence web à Nantes. Ses contributions sont visibles sur github.com/ronanguilloux.",
     "type":"discovery",
     "socials":[
@@ -362,7 +409,7 @@
     "name":"Tugdual Grall",
     "title":"Technical Evangelist <br> NoSQL",
     "bio":"Technical Evangelist at MongoDB, passionate developer. Co-founder of the @nantesJUG, and founder of http://www.resultri.com",
-    "type":"cloud",
+    "type":"discovery",
     "socials":[
       {"type":"twitter","url":"https://twitter.com/tgrall"},
       {"type":"google-plus","url":"https://plus.google.com/+TugdualGrall"},
@@ -370,8 +417,21 @@
       {"type":"globe","url":"http://blog.grallandco.com"}
       ]
   },
-  "tbd":{
+  "xhallade":{
     "show":true,
+    "name":"Xavier Hallade",
+    "title":"Developer Evangelist <br> Intel",
+    "bio":"Ingénieur logiciel chez Intel France, en charge d'aider les développeurs d'Applications et librairies Android à améliorer le support des architectures x86(_64) et autres technologies développées par Intel.",
+    "type":"mobile",
+    "socials":[
+      {"type":"twitter","url":"https://twitter.com/ph0b"},
+      {"type":"google-plus","url":"https://plus.google.com/+XavierHallade"},
+      {"type":"github-alt","url":"https://github.com/ph0b"},
+      {"type":"globe","url":"http://ph0b.com/"}
+      ]
+  },
+  "tbd":{
+    "show":false,
     "name":"Futur speaker",
     "title":"",
     "bio":"Futur speaker à venir",

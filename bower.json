@@ -6,6 +6,7 @@
     "angular-route": "1.2.9",
     "angular-sanitize": "1.2.9",
     "underscore": "1.5.2",
-    "font-awesome":"4.2.0"
+    "font-awesome":"4.2.0",
+    "Chart.js":"1.0.1-beta.4"
   }
 }

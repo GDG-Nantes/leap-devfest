@@ -32,8 +32,7 @@ main.factory('Request', ['$q', '$http', '$rootScope',
           },
           {
             id:'speakers-discovery',
-            label:'Découverte',
-            directLast : true,
+            label:'Découverte',            
             submenus : []
           }]
           };
@@ -66,30 +65,10 @@ main.factory('Request', ['$q', '$http', '$rootScope',
 
         var statsMenu = {
           id:'stats',
-          label : 'Statistiques',
+          label : 'DevFest En Chiffres',
           icon : 'pie-chart',
-          submenus : [{
-            id : "stats-2013",
-            label : "Statistiques 2013",
-            submenus: [{
-              id: "stats-2013-global", 
-              label : "Stats 2013"
-            }]
-          },
-          {
-            id : "stats-2014",
-            label : "Statistiques 2014",
-            submenus: [
-            {
-              "id" : "stats-2014-cfp",
-              "label" : "CFP"
-            },
-            {
-              "id" : "stats-2014-participants",
-              "label" : "Participants"
-            }
-            ]
-          }]
+          directLast : true,
+          submenus : []
           };
 
         // Creation du menu
