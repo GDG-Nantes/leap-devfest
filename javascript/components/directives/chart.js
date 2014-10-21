@@ -10,7 +10,8 @@ components.directive('chart', ['$rootScope'
       idChart:"@id",
       data:"=data",
       type:"@type", 
-      options:"=options"
+      options:"=options",
+      leapState : "=leapState"
     },    
     link: function postLink(scope, iElement, iAttrs) { 
 
