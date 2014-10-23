@@ -8,78 +8,239 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 
     //http://www.chartjs.org/
 
-    $scope.dataLine = {
-	    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    $scope.dataNbParticipants = {
+	    labels: ["2012", "2013", "2014"],
 	    datasets: [
 	        {
-	            label: "My First dataset",
-	            fillColor: "rgba(220,220,220,0.2)",
-	            strokeColor: "rgba(220,220,220,1)",
-	            pointColor: "rgba(220,220,220,1)",
-	            pointStrokeColor: "#fff",
-	            pointHighlightFill: "#fff",
-	            pointHighlightStroke: "rgba(220,220,220,1)",
-	            data: [65, 59, 80, 81, 56, 55, 40]
+	            label: "Nombre d'inscrits'",
+	            fillColor: "rgba(218,72,60,0.5)",
+	            strokeColor: "rgba(218,72,60,0.8)",
+	            highlightFill: "rgba(218,72,60,0.75)",
+	            highlightStroke: "rgba(218,72,60,1)",
+	            data: [157, 221, 277]
 	        },
 	        {
-	            label: "My Second dataset",
-	            fillColor: "rgba(151,187,205,0.2)",
-	            strokeColor: "rgba(151,187,205,1)",
-	            pointColor: "rgba(151,187,205,1)",
-	            pointStrokeColor: "#fff",
-	            pointHighlightFill: "#fff",
-	            pointHighlightStroke: "rgba(151,187,205,1)",
-	            data: [28, 48, 40, 19, 86, 27, 90]
+	            label: "Nombre d'hommes",
+	            fillColor: "rgba(99,136,197,0.5)",
+	            strokeColor: "rgba(99,136,197,0.8)",
+	            highlightFill: "rgba(99,136,197,0.75)",
+	            highlightStroke: "rgba(99,136,197,1)",
+	            data: [148, 204, 259]
+	        },
+	        {
+	            label: "Nombre de femmes",
+	            fillColor: "rgba(247,198,61,0.5)",
+	            strokeColor: "rgba(247,198,61,0.8)",
+	            highlightFill: "rgba(247,198,61,0.75)",
+	            highlightStroke: "rgba(247,198,61,1)",
+	            data: [8, 16, 13]
 	        }
 	    ]
 	};
-	$scope.optionsLine = {
-	    ///Boolean - Whether grid lines are shown across the chart
+	$scope.optionsNbParticipants = {
+	    //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
+	    scaleBeginAtZero : true,
+
+	    //Boolean - Whether grid lines are shown across the chart
 	    scaleShowGridLines : true,
+
 	    //String - Colour of the grid lines
 	    scaleGridLineColor : "rgba(0,0,0,.05)",
+
 	    //Number - Width of the grid lines
 	    scaleGridLineWidth : 1,
-	    //Boolean - Whether the line is curved between points
-	    bezierCurve : true,
-	    //Number - Tension of the bezier curve between points
-	    bezierCurveTension : 0.4,
-	    //Boolean - Whether to show a dot for each point
-	    pointDot : true,
-	    //Number - Radius of each point dot in pixels
-	    pointDotRadius : 4,
-	    //Number - Pixel width of point dot stroke
-	    pointDotStrokeWidth : 1,
-	    //Number - amount extra to add to the radius to cater for hit detection outside the drawn point
-	    pointHitDetectionRadius : 20,
-	    //Boolean - Whether to show a stroke for datasets
-	    datasetStroke : true,
-	    //Number - Pixel width of dataset stroke
-	    datasetStrokeWidth : 2,
-	    //Boolean - Whether to fill the dataset with a colour
-	    datasetFill : true,
+
+	    //Boolean - If there is a stroke on each bar
+	    barShowStroke : true,
+
+	    //Number - Pixel width of the bar stroke
+	    barStrokeWidth : 2,
+
+	    //Number - Spacing between each of the X value sets
+	    barValueSpacing : 5,
+
+	    //Number - Spacing between data sets within X values
+	    barDatasetSpacing : 1,
+
 	    //String - A legend template
 	    legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
+
 	};
 
-	$scope.dataPie = [
+	$scope.dataPieRegion2013 = [
     {
-        value: 300,
-        color:"#F7464A",
-        highlight: "#FF5A5E",
-        label: "Red"
+        value: 166,
+        color:"#da483c", //Red
+        highlight: "#da5d53",
+        label: "Loire Atlantique"
     },
+    {
+        value: 15,
+        color: "#6388c5", // Blue
+        highlight: "#7694c5",
+        label: "Bretagne"
+    },
+    {
+        value: 4,
+        color: "#0c9a54", // Green
+        highlight: "#1c9a5c",
+        label: "Vendée"
+    },
+    {
+        value: 20,
+        color: "#f7c63d", // Yellow
+        highlight: "#f7cd56",
+        label: "Maine et Loire"
+    },
+    {
+        value: 5,
+        color: "#da483c",
+        highlight: "#da5d53",
+        label: "Languedoc"
+    },
+    {
+        value: 2,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "Hors France"
+    },
+    {
+        value: 2,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "Nord pas de Callais"
+    },
+    {
+        value: 1,
+        color: "#f7c63d",
+        highlight: "#f7cd56",
+        label: "Drome"
+    },
+    {
+        value: 4,
+        color: "#da483c",
+        highlight: "#da5d53",
+        label: "Région Parisienne"
+    },
+    {
+        value: 1,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "Eure"
+    }];
+
+    $scope.dataPieRegion2014 = [
+    {
+        value: 218,
+        color:"#da483c",
+        highlight: "#da5d53",
+        label: "Loire Atlantique"
+    },
+    {
+        value: 1,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "Bretagne"
+    },
+    {
+        value: 2,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "Vendée"
+    },
+    {
+        value: 8,
+        color: "#f7c63d",
+        highlight: "#f7cd56",
+        label: "Maine et Loire"
+    },
+    {
+        value: 1,
+        color: "#da483c",
+        highlight: "#da5d53",
+        label: "Drome"
+    },
+    {
+        value: 1,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "Région Parisienne"
+    }];
+
+    $scope.dataPieAge2013 = [
     {
         value: 50,
-        color: "#46BFBD",
-        highlight: "#5AD3D1",
-        label: "Green"
+        color:"#da483c",
+        highlight: "#da5d53",
+        label: "18-23"
     },
     {
-        value: 100,
-        color: "#FDB45C",
-        highlight: "#FFC870",
-        label: "Yellow"
+        value: 51,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "23-30"
+    },
+    {
+        value: 33,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "30-35"
+    },
+    {
+        value: 24,
+        color: "#f7c63d",
+        highlight: "#f7cd56",
+        label: "35-40"
+    },
+    {
+        value: 15,
+        color: "#da483c",
+        highlight: "#da5d53",
+        label: "40+"
+    },
+    {
+        value: 47,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "NC"
+    }];
+
+    $scope.dataPieAge2014 = [
+    {
+        value: 49,
+        color:"#da483c",
+        highlight: "#da5d53",
+        label: "18-23"
+    },
+    {
+        value: 96,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "23-30"
+    },
+    {
+        value: 71,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "30-35"
+    },
+    {
+        value: 36,
+        color: "#f7c63d",
+        highlight: "#f7cd56",
+        label: "35-40"
+    },
+    {
+        value: 21,
+        color: "#da483c",
+        highlight: "#da5d53",
+        label: "40+"
+    },
+    {
+        value: 3,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "NC"
     }];
 
     $scope.optionsPie = {

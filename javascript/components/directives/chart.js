@@ -15,11 +15,14 @@ components.directive('chart', ['$rootScope'
     },    
     link: function postLink(scope, iElement, iAttrs) { 
 
+
+      Chart.defaults.global.tooltipEvents = ["mousemove","click"];
+
       var ctx = iElement[0].getContext("2d");
       var myNewChart = null;
 
       if (scope.type === 'line'){
-        myNewChart = new Chart(ctx).Line(scope.data, scope.options);                
+        myNewChart = new Chart(ctx).Line(scope.data, scope.options);                        
       }else if (scope.type === 'bar'){
         myNewChart = new Chart(ctx).Bar(scope.data, scope.options);                
       }else if (scope.type === 'radar'){
@@ -27,7 +30,7 @@ components.directive('chart', ['$rootScope'
       }else if (scope.type === 'polar'){
         myNewChart = new Chart(ctx).Polar(scope.data, scope.options);                
       }else if (scope.type === 'pie'){
-        myNewChart = new Chart(ctx).Pie(scope.data, scope.options);                
+        myNewChart = new Chart(ctx).Doughnut(scope.data, scope.options);                
       }
 
 

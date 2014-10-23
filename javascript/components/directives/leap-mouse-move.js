@@ -7,6 +7,8 @@ components.directive('leapMouseMove', ['$rootScope'
 
       var element = iElement[0];
       var boundingRect = element.getBoundingClientRect();
+      console.log('Id : '+element.id);
+      console.log(boundingRect);
 
       var unregister = $scope.$watch('leapState', function(leapState, oldleapState){
     
@@ -16,8 +18,8 @@ components.directive('leapMouseMove', ['$rootScope'
             mouseEvent('mousemove', 
               screenPosition[0], // Screen X
               screenPosition[1], // Screen Y
-              screenPosition[0] - boundingRect.left , // Client X
-              screenPosition[1] - boundingRect.top // Client Y
+              screenPosition[0], // Client X
+              screenPosition[1]  // Client Y
               ))
           ;
           

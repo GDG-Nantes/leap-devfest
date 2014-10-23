@@ -1,7 +1,26 @@
-<div>
-	<chart width="400px" height="400px" data="dataPie" options="optionsPie" id="pieTest" type="pie" leap-state="leapState"></canvas> 
+<div id="stats-view">	
+	
+		<div class="nb-participants">
+			<chart width="800px" height="300px" data="dataNbParticipants" options="optionsNbParticipants" id="nbParticipantsChart" type="bar" leap-state="leapState"></chart>
+			<p><div class="participant">Nombre de participants </div><div class="hommes">Hommes </div><div class="femmes">Femmes</div></p>
+		</div>
 
-	
-	<chart width="400px" height="400px" data="dataLine" options="optionsLine" id="lineTest" type="line" leap-state="leapState"></canvas>
-	
+		<div class="donughts">
+			<div class="region-2013">
+				<chart width="250px" height="250px" data="dataPieRegion2013" options="optionsPie" id="pieTest" type="pie" leap-state="leapState"></chart> 
+				<p>Nb Participants / Départements - 2013</p>
+			</div>
+			<div class="region-2014">
+				<chart width="250px" height="250px" data="dataPieRegion2014" options="optionsPie" id="pieTest" type="pie" leap-state="leapState"></chart> 
+				<p>Nb Participants / Départements - 2014</p>
+			</div>
+			<div class="age-2013">
+				<chart width="250px" height="250px" data="dataPieAge2013" options="optionsPie" id="pieTest" type="pie" leap-state="leapState"></chart> 
+				<p>Nb Participants / Age - 2013</p>
+			</div>
+			<div class="age-2014">
+				<chart width="250px" height="250px" data="dataPieAge2014" options="optionsPie" id="pieTest" type="pie" leap-state="leapState"></chart> 
+				<p>Nb Participants / Age - 2014</p>
+			</div>
+		</div>
 </div>

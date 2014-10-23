@@ -1,0 +1,63 @@
+@import "colors";
+@import "vars";
+
+$dimlegende : 25px;
+
+#stats-view{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 50px;
+	color: white;
+	text-align: center;
+
+	.nb-participants{
+		width: 800px;
+		position: relative;
+		left: 300px;
+
+		.participant, .hommes, .femmes{
+			display: inline-block;
+			position: relative;
+			margin-left: 50px;
+		}
+
+
+		.participant::before, .hommes::before, .femmes::before{
+			content: '';
+			position: absolute;
+			width: $dimlegende;
+			height: $dimlegende;
+			left: -$dimlegende - 10px;
+			top: -3px;
+		}
+
+		.participant::before{
+			background: rgba(218,72,60,0.5);
+		}
+
+		.hommes::before{
+			background: rgba(99,136,197,0.5);
+		}
+
+		.femmes::before{
+			background: rgba(247,198,61,0.5);
+		}
+
+	}
+
+	.donughts{
+		width: 1500px;
+		margin-top: 60px;
+
+		canvas{
+			margin-right: 50px;
+		}
+	}
+
+	.donughts > div{
+		display: inline-block;
+		width: 300px;		
+	}
+
+}
