@@ -131,40 +131,94 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 
     $scope.dataPieRegion2014 = [
     {
-        value: 218,
+        value: 283,
         color:"#da483c",
         highlight: "#da5d53",
         label: "Loire Atlantique"
     },
     {
-        value: 1,
+        value: 3,
         color: "#6388c5",
         highlight: "#7694c5",
-        label: "Bretagne"
-    },
-    {
-        value: 2,
-        color: "#0c9a54",
-        highlight: "#1c9a5c",
         label: "Vendée"
     },
     {
-        value: 8,
+        value: 5,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "Poitou Charentes"
+    },
+    {
+        value: 13,
         color: "#f7c63d",
         highlight: "#f7cd56",
+        label: "Bretagne"
+    },
+    {
+        value: 12,
+        color: "#da483c",
+        highlight: "#da5d53",
         label: "Maine et Loire"
+    },
+    {
+        value: 4,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "Indre et Loire"
+    },
+    {
+        value: 10,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "Région Parisienne"
+    },
+    {
+        value: 1,
+        color: "#f7c63d",
+        highlight: "#f7cd56",
+        label: "Haute Vienne"
     },
     {
         value: 1,
         color: "#da483c",
         highlight: "#da5d53",
-        label: "Drome"
+        label: "Deux Sèvres"
     },
     {
         value: 1,
         color: "#6388c5",
         highlight: "#7694c5",
-        label: "Région Parisienne"
+        label: "Gironde"
+    },
+    {
+        value: 2,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "Rhône"
+    },
+    {
+        value: 1,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "Drome"
+    },
+    {
+        value: 1,
+        color: "#f7c63d",
+        highlight: "#f7cd56",
+        label: "Haute Garonne"
+    },
+    {
+        value: 1,
+        color: "#da483c",
+        highlight: "#da5d53",
+        label: "Puy de Dôme"
+    },
+    {
+        value: 1,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "Charentes Maritime"
     }];
 
     $scope.dataPieAge2013 = [
