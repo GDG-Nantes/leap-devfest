@@ -17,7 +17,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 	            strokeColor: "rgba(218,72,60,0.8)",
 	            highlightFill: "rgba(218,72,60,0.75)",
 	            highlightStroke: "rgba(218,72,60,1)",
-	            data: [157, 221, 277]
+	            data: [157, 220, 410]
 	        },
 	        {
 	            label: "Nombre d'hommes",
@@ -25,7 +25,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 	            strokeColor: "rgba(99,136,197,0.8)",
 	            highlightFill: "rgba(99,136,197,0.75)",
 	            highlightStroke: "rgba(99,136,197,1)",
-	            data: [148, 204, 259]
+	            data: [148, 204, 384]
 	        },
 	        {
 	            label: "Nombre de femmes",
@@ -33,7 +33,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 	            strokeColor: "rgba(247,198,61,0.8)",
 	            highlightFill: "rgba(247,198,61,0.75)",
 	            highlightStroke: "rgba(247,198,61,1)",
-	            data: [8, 16, 13]
+	            data: [8, 16, 21]
 	        }
 	    ]
 	};
@@ -131,31 +131,31 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 
     $scope.dataPieRegion2014 = [
     {
-        value: 283,
+        value: 344,
         color:"#da483c",
         highlight: "#da5d53",
         label: "Loire Atlantique"
     },
     {
-        value: 3,
+        value: 8,
         color: "#6388c5",
         highlight: "#7694c5",
         label: "Vendée"
     },
     {
-        value: 5,
+        value: 6,
         color: "#0c9a54",
         highlight: "#1c9a5c",
         label: "Poitou Charentes"
     },
     {
-        value: 13,
+        value: 14,
         color: "#f7c63d",
         highlight: "#f7cd56",
         label: "Bretagne"
     },
     {
-        value: 12,
+        value: 13,
         color: "#da483c",
         highlight: "#da5d53",
         label: "Maine et Loire"
@@ -167,7 +167,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
         label: "Indre et Loire"
     },
     {
-        value: 10,
+        value: 12,
         color: "#0c9a54",
         highlight: "#1c9a5c",
         label: "Région Parisienne"
@@ -261,37 +261,37 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 
     $scope.dataPieAge2014 = [
     {
-        value: 49,
+        value: 50,
         color:"#da483c",
         highlight: "#da5d53",
         label: "18-23"
     },
     {
-        value: 96,
+        value: 137,
         color: "#6388c5",
         highlight: "#7694c5",
         label: "23-30"
     },
     {
-        value: 71,
+        value: 117,
         color: "#0c9a54",
         highlight: "#1c9a5c",
         label: "30-35"
     },
     {
-        value: 36,
+        value: 61,
         color: "#f7c63d",
         highlight: "#f7cd56",
         label: "35-40"
     },
     {
-        value: 21,
+        value: 35,
         color: "#da483c",
         highlight: "#da5d53",
         label: "40+"
     },
     {
-        value: 3,
+        value: 10,
         color: "#6388c5",
         highlight: "#7694c5",
         label: "NC"

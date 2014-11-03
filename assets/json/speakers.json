@@ -57,19 +57,6 @@
       {"type":"globe","url":"http://www.cyrilmottier.com/"}
       ]
   },
-  "cquilici":{
-    "show":false,
-    "name":"",
-    "title":"",
-    "bio":"",
-    "type":"discovery",
-    "socials":[
-      {"type":"twitter","url":""},
-      {"type":"google-plus","url":""},
-      {"type":"github-alt","url":""},
-      {"type":"globe","url":""}
-      ]
-  },
   "dgageot":{
     "show":true,
     "name":"David Gageot",
@@ -141,19 +128,6 @@
       {"type":"google-plus","url":"https://plus.google.com/u/0/105610682092905992183"}
       ]
   },
-  "ftrichet":{
-    "show":false,
-    "name":"Francky Trichet",
-    "title":"",
-    "bio":"",
-    "type":"keynote",
-    "socials":[
-      {"type":"twitter","url":""},
-      {"type":"google-plus","url":""},
-      {"type":"github-alt","url":""},
-      {"type":"globe","url":""}
-      ]
-  },
   "ggirou":{
     "show":true,
     "name":"Guillaume Girou",
@@ -165,16 +139,6 @@
       {"type":"google-plus","url":"https://plus.google.com/+GuillaumeGirou"},
       {"type":"github-alt","url":"https://github.com/ggirou"},
       {"type":"globe","url":"http://gplus.to/dartlangfr"}
-      ]
-  },
-  "gmenvielle":{
-    "show":true,
-    "name":"Gregory Menvielle",
-    "title":"Technical Evangelist<br> XDK",
-    "bio":"Gregory Menvielle  is the CEO and founder of Pyramedium, and is currently developing an HTML5 app called smartnotify (http://smartnotify.us/). Greg kindly consented to sitting down and giving us some information about his background, his current work, and his thoughts on HTML5.",
-    "type":"web",
-    "socials":[
-      {"type":"twitter","url":"https://twitter.com/pyramedium"}
       ]
   },
   "hgonzalez":{
@@ -320,17 +284,15 @@
       {"type":"globe","url":"http://gplus.to/dartlangfr"}
       ]
   },
-  "pcans":{
-    "show":false,
-    "name":"Pascal Cans",
-    "title":"",
-    "bio":"",
-    "type":"mobile",
+  "nlebot":{
+    "show":true,
+    "name":"Nicolas Le Bot",
+    "title":"Developer<br>Mobile",
+    "bio":"I'm a epitech student in the last year working on mobile development. I'm always reading news in hi tech to learn new stuffs and others things.",
+    "type":"web",
     "socials":[
-      {"type":"twitter","url":""},
-      {"type":"google-plus","url":""},
-      {"type":"github-alt","url":""},
-      {"type":"globe","url":""}
+      {"type":"twitter","url":"https://twitter.com/Nicolas_lebot"},
+      {"type":"google-plus","url":"https://plus.google.com/+NicolasLeBot/"}
       ]
   },
   "preliquet":{
@@ -378,19 +340,6 @@
       {"type":"google-plus","url":"https://plus.google.com/u/0/+RomainMenetrier"}
       ]
   },
-  "roddet":{
-    "show":false,
-    "name":"Rossi Oddet",
-    "title":"",
-    "bio":"",
-    "type":"keynote",
-    "socials":[
-      {"type":"twitter","url":""},
-      {"type":"google-plus","url":""},
-      {"type":"github-alt","url":""},
-      {"type":"globe","url":""}
-      ]
-  },
   "swalter":{
     "show":true,
     "name":"Stéphanie Walter",
@@ -429,14 +378,6 @@
       {"type":"github-alt","url":"https://github.com/ph0b"},
       {"type":"globe","url":"http://ph0b.com/"}
       ]
-  },
-  "tbd":{
-    "show":false,
-    "name":"Futur speaker",
-    "title":"",
-    "bio":"Futur speaker à venir",
-    "type":"cloud",
-    "socials":[]
   }
 
 }
