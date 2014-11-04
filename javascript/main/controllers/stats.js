@@ -17,7 +17,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 	            strokeColor: "rgba(218,72,60,0.8)",
 	            highlightFill: "rgba(218,72,60,0.75)",
 	            highlightStroke: "rgba(218,72,60,1)",
-	            data: [157, 220, 410]
+	            data: [157, 220, 487]
 	        },
 	        {
 	            label: "Nombre d'hommes",
@@ -25,7 +25,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 	            strokeColor: "rgba(99,136,197,0.8)",
 	            highlightFill: "rgba(99,136,197,0.75)",
 	            highlightStroke: "rgba(99,136,197,1)",
-	            data: [148, 204, 384]
+	            data: [148, 204, 450]
 	        },
 	        {
 	            label: "Nombre de femmes",
@@ -33,7 +33,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 	            strokeColor: "rgba(247,198,61,0.8)",
 	            highlightFill: "rgba(247,198,61,0.75)",
 	            highlightStroke: "rgba(247,198,61,1)",
-	            data: [8, 16, 21]
+	            data: [8, 16, 33]
 	        }
 	    ]
 	};
@@ -131,7 +131,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 
     $scope.dataPieRegion2014 = [
     {
-        value: 344,
+        value: 408,
         color:"#da483c",
         highlight: "#da5d53",
         label: "Loire Atlantique"
@@ -143,13 +143,13 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
         label: "Vendée"
     },
     {
-        value: 6,
+        value: 8,
         color: "#0c9a54",
         highlight: "#1c9a5c",
         label: "Poitou Charentes"
     },
     {
-        value: 14,
+        value: 15,
         color: "#f7c63d",
         highlight: "#f7cd56",
         label: "Bretagne"
@@ -167,7 +167,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
         label: "Indre et Loire"
     },
     {
-        value: 12,
+        value: 18,
         color: "#0c9a54",
         highlight: "#1c9a5c",
         label: "Région Parisienne"
@@ -191,7 +191,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
         label: "Gironde"
     },
     {
-        value: 2,
+        value: 3,
         color: "#0c9a54",
         highlight: "#1c9a5c",
         label: "Rhône"
@@ -215,10 +215,16 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
         label: "Puy de Dôme"
     },
     {
-        value: 1,
+        value: 2,
         color: "#6388c5",
         highlight: "#7694c5",
         label: "Charentes Maritime"
+    },
+    {
+        value: 2,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "Hors France"
     }];
 
     $scope.dataPieAge2013 = [
@@ -261,31 +267,31 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 
     $scope.dataPieAge2014 = [
     {
-        value: 50,
+        value: 71,
         color:"#da483c",
         highlight: "#da5d53",
         label: "18-23"
     },
     {
-        value: 137,
+        value: 150,
         color: "#6388c5",
         highlight: "#7694c5",
         label: "23-30"
     },
     {
-        value: 117,
+        value: 135,
         color: "#0c9a54",
         highlight: "#1c9a5c",
         label: "30-35"
     },
     {
-        value: 61,
+        value: 72,
         color: "#f7c63d",
         highlight: "#f7cd56",
         label: "35-40"
     },
     {
-        value: 35,
+        value: 49,
         color: "#da483c",
         highlight: "#da5d53",
         label: "40+"
