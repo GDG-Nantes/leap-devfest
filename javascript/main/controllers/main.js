@@ -32,7 +32,7 @@ main.controller('MainCtrl', ['$scope', '$rootScope', '$location', '$interval','R
 
 
     $interval(function(){
-        if ((new Date().getTime() - $scope.timeout) > 500 * 1000 ){ //60 * 1000){
+        if ((new Date().getTime() - $scope.timeout) > 60 * 1000){
             console.log('passed');
             $scope.model.timeoutPassed = true;
             
