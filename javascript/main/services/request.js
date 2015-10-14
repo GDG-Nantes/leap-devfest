@@ -77,21 +77,19 @@ main.factory('Request', ['$q', '$http', '$rootScope',
           var speakerId = keysSpeakers[i];
           var speaker = speakerJson[speakerId];
           var index = 0;
-          if (speaker.type === 'mobile'){
+          if (speaker.category.class === 'mobile'){
             index = 0;
-          }else if (speaker.type === 'web'){
+          }else if (speaker.category.class === 'web'){
             index = 1;
-          }else if (speaker.type === 'cloud'){
+          }else if (speaker.category.class === 'cloud'){
             index = 2;
           }else{
             index = 3;
           }
           speaker.id = 'speakers-'+speakerId;
-          speaker.label = speaker.name;
+          speaker.label = speaker.firstname+' '+speaker.lastname;
           speaker.photo = 'img-'+speakerId;
-          if (speaker.show){
-            speakerMenu.submenus[index].submenus.push(speaker);
-          }
+          speakerMenu.submenus[index].submenus.push(speaker);
         }
 
         var sessionsJson = {};

@@ -9,7 +9,8 @@ components.directive('pointerLeap', ['$rootScope'
 
       var pointer = document.querySelector('#pointerTest');
       
-      $scope.$watch('leapState', function(leapState, oldleapState){
+      //$scope.$watch('leapState', function(leapState, oldleapState){
+      $rootScope.$on('leapState', function(evt, leapState){
         if (leapState.handActive){
           var screenPosition = leapState.fingerPos;
           if (!pointer){

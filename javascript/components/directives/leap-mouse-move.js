@@ -10,9 +10,10 @@ components.directive('leapMouseMove', ['$rootScope'
       console.log('Id : '+element.id);
       console.log(boundingRect);
 
-      var unregister = $scope.$watch('leapState', function(leapState, oldleapState){
+      //var unregister = $scope.$watch('leapState', function(leapState, oldleapState){
+      var unregister = $rootScope.$on('leapState', function(evt, leapState){
     
-        if (leapState.handActive){
+        if (leapState.handActive && leapState.leapMotion){
           var screenPosition = leapState.fingerPos;
           dispatchEvent(element, 
             mouseEvent('mousemove', 

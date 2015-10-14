@@ -22,7 +22,11 @@ components.directive('leapController', ['$rootScope'
               }
               var screenPosition = finger.screenPosition(finger.btipPosition);            
               screenPosition[1] = screenPosition[1]+400;
+              if (!$scope.leapState.leapMotion){
+                $scope.leapState.leapMotion = true;
+              }
               $scope.leapState.fingerPos = screenPosition;
+              $rootScope.$broadcast('leapState', $scope.leapState);
             }
           });
 
@@ -33,7 +37,8 @@ components.directive('leapController', ['$rootScope'
         .on('handFound', function(hand){
           $scope.$apply(function(){
               $scope.timeout = new Date().getTime();
-              $scope.leapState.handActive = true;
+              $scope.leapState.handActive = true;              
+              $rootScope.$broadcast('leapState', $scope.leapState);
           });
           console.log('found Hand');
         })
@@ -41,11 +46,34 @@ components.directive('leapController', ['$rootScope'
           $scope.$apply(function(){
               $scope.timeout = new Date().getTime();
               $scope.leapState.handActive = false;
+              $rootScope.$broadcast('leapState', $scope.leapState);
           });
           console.log('lost Hand');
         });
         
        
+       // Fallback management for mouse
+       document.addEventListener('mousemove', function(event){
+          if ($scope.leapState.leapMotion){
+            $scope.leapState.leapMotion = false;
+          }
+          $scope.leapState.fingerPos = [event.clientX, event.clientY];
+          $rootScope.$broadcast('leapState', $scope.leapState);
+       });
+       document.addEventListener('mouseenter', function(event){
+          $scope.$apply(function(){
+              $scope.timeout = new Date().getTime();
+              $scope.leapState.handActive = true;
+              $rootScope.$broadcast('leapState', $scope.leapState);
+          });
+       });
+       document.addEventListener('mouseleave', function(event){
+          $scope.$apply(function(){
+              $scope.timeout = new Date().getTime();
+              $scope.leapState.handActive = false;
+              $rootScope.$broadcast('leapState', $scope.leapState);
+          });
+       });
           
       }
   };

@@ -28,7 +28,8 @@ components.directive('leapSelector', ['$rootScope'
       console.log(bg);
       console.log(clientRectBg);
 
-      var unregister = $scope.$watch('leapState', function(leapState, oldleapState){
+      //var unregister = $scope.$watch('leapState', function(leapState, oldleapState){
+      var unregister = $rootScope.$on('leapState', function(evt,leapState){
     
         if (leapState.handActive){
           var screenPosition = leapState.fingerPos;
