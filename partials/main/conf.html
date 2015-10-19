@@ -9,9 +9,9 @@
 			<p ng-bind-html="conf.desc" class="desc"></p>
 			<h2><u>Speakers : </u></h2>
 			<div ng-repeat="speaker in conf.speakersArray" class="conf-speakers">
-			<div class="img-speaker circular-img-xs {{speaker.photo}} {{speaker.type}}"></div>
-			<div class="speaker-name">{{speaker.name}}</div>
-			<leap-selector leap-state='leapState' id='speaker.id'></leap-selector>
+				<div class="img-speaker circular-img-xs {{speaker.photo}} {{speaker.type}}"></div>
+				<div class="speaker-name">{{speaker.name}}</div>
+				<leap-selector leap-state='leapState' id='speaker.id'></leap-selector>
 			</div>
 			<h2><u>Horaires & Salle : </u></h2>
 			<p class="conf-hours">{{conf.hour.hourStart}}h{{conf.hour.minStart}}-

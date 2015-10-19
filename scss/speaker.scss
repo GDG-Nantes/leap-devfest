@@ -8,10 +8,7 @@
 	border-radius: $size-cirular-xs / 2;
 	-webkit-border-radius: $size-cirular-xs / 2;
 	-moz-border-radius: $size-cirular-xs / 2;
-	position: relative;
-	left: 20px;
-	top: -50%;
-	margin-top: -$size-cirular-xs;
+	margin-left: 15px;	
 }
 
 .circular-img {
@@ -27,7 +24,7 @@
 }
 
 .img-speaker.circular-img-xs {
-	top: -$size-cirular-xs / 2;
+	//top: -$size-cirular-xs-max / 2;
 }
 
 #speaker{
@@ -160,7 +157,7 @@
 	
 }
 
-.img-commitstrip {
+.img-eissartial {
 	background: url(../assets/images/speakers/commitstrip_360x360.jpg) no-repeat;
 	background-size:contain;
 	

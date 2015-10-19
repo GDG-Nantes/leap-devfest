@@ -6,7 +6,7 @@
 
 $animation-duration : 2s;
 $size-border : 10px;
-$size : $size-cirular-xs + (2 * $size-border);
+$size : $size-cirular-xs-max + (2 * $size-border);
 $color-bg : #444;
 $color-border : darken($color-select,20%);
 

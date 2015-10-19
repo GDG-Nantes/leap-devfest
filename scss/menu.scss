@@ -73,15 +73,16 @@ $width-block-last : 500px;
 }
 
 #menu li.li_niv_0 > .bg-last-li{
-    margin-top: 20px;
+    //margin-top: 20px;
 }
 
 
 #menu li.li_niv_0.move{
     width: 800px;
+    position:relative;
 }
 
-#menu #speakers-mobile.hover, #menu #confs-mobile.hover{
+#menu #speakers-mobile.hover, #menu #confs-mobile.hover{ 
     background-color: $green-gdg-color;
 }
 #menu #speakers-cloud.hover, #menu #confs-cloud.hover{
@@ -100,7 +101,7 @@ $width-block-last : 500px;
     content: '\f105';
     position: relative;
     right: -93px;
-    top: 20px;
+    //top: 20px;
     line-height: 0;
 }
 
@@ -141,17 +142,43 @@ $width-block-last : 500px;
 
 #menu li.li_niv_2{
     font-size: 0.75em;
+    display: block;
+    position:relative;
+    text-align: left;
+    /*
+    display: flex;
+    justify-content: flex-start;
+    align-items:stretch;
+    position: relative;*/
+
+    .img-speaker-parent{
+        display: inline-block;
+        height:100%;
+        .img-speaker{
+            display: inline-block;
+            vertical-align:middle;
+        }
+    }
 
     .overflow-text{        
+        vertical-align:middle;
+        margin-left:10px;
+        width:100%;
+        display:inline-block;
         overflow: hidden;
         text-overflow : ellipsis;
         white-space: nowrap;
     }
+    .img-speaker-parent + .overflow-text{        
+        width:calc(100% - 120px);
+        
+    }
 }
 
 .valid-div{
-    position: relative;
+    position: absolute;
     color: white;
+    top:0;
     right: 0;
     width: 100%;
     height: 100%;
@@ -164,14 +191,15 @@ li.move.last > .valid-div:after, li.move.last > .li_niv_0_content > .valid-div:a
     background-color: $color-select;
     color: white;
     width: 1.5em;
-    top: 20px;
+    //top: 20px;
     right: -1.5em;
     height: 100%;
     position: absolute;
 }
 
 .bg-last-li{
-    position: relative;
+    position: absolute;
+    top:0;
     height: 100%;
     left: 0;
     background-color: $color-select;
@@ -198,18 +226,25 @@ li.move.last > .valid-div:after, li.move.last > .li_niv_0_content > .valid-div:a
 @mixin height-mixin-percent($size){
     .h-#{$size}{
         height: calc((100% / #{$size}) - 20px);
-        line-height: (100vh/$size);
+        line-height: calc((100vh / #{$size}) - 20px); 
+    }
+    .h-#{$size} .circular-img-xs {
+        height: calc((100vh / #{$size}) - 40px);
+        width: calc((100vh / #{$size}) - 40px);
+        border-radius: calc((100vh / #{$size}) - 40px);
+        -webkit-border-radius: calc((100vh / #{$size}) - 40px);
+        -moz-border-radius: calc((100vh / #{$size}) - 40px);
     }
 
     .top-#{$size}{
-        top: -(100vh/$size);
+        //top: -(100vh/$size);
     }
 
     .top-db-#{$size}{
-        top: -((100vh/$size)*2);
+        //top: -((100vh/$size)*2);
     }
 }
 
-@for $i from 1 through 10{
+@for $i from 1 through 12{
     @include height-mixin-percent($i);
 }

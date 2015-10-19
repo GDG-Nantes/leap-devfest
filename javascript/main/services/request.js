@@ -117,7 +117,7 @@ main.factory('Request', ['$q', '$http', '$rootScope',
             	var speaker = speakerJson[session.speakers[indexSpeaker]];
               session.speakersArray.push({
                 id : speaker.id,
-                name : speaker.name,
+                name : speaker.firstname+' '+speaker.lastname,
                 photo : speaker.photo
               });
             	speaker.session = session;

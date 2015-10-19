@@ -9,7 +9,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
     //http://www.chartjs.org/
 
     $scope.dataNbParticipants = {
-	    labels: ["2012", "2013", "2014"],
+	    labels: ["2012", "2013", "2014", "2015"],
 	    datasets: [
 	        {
 	            label: "Nombre d'inscrits'",
@@ -17,7 +17,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 	            strokeColor: "rgba(218,72,60,0.8)",
 	            highlightFill: "rgba(218,72,60,0.75)",
 	            highlightStroke: "rgba(218,72,60,1)",
-	            data: [157, 220, 487]
+	            data: [157, 220, 487, 510]
 	        },
 	        {
 	            label: "Nombre d'hommes",
@@ -25,7 +25,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 	            strokeColor: "rgba(99,136,197,0.8)",
 	            highlightFill: "rgba(99,136,197,0.75)",
 	            highlightStroke: "rgba(99,136,197,1)",
-	            data: [148, 204, 450]
+	            data: [148, 204, 450, 478]
 	        },
 	        {
 	            label: "Nombre de femmes",
@@ -33,7 +33,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 	            strokeColor: "rgba(247,198,61,0.8)",
 	            highlightFill: "rgba(247,198,61,0.75)",
 	            highlightStroke: "rgba(247,198,61,1)",
-	            data: [8, 16, 33]
+	            data: [8, 16, 33, 32]
 	        }
 	    ]
 	};
@@ -227,6 +227,80 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
         label: "Hors France"
     }];
 
+    $scope.dataPieRegion2015 = [
+    {
+        value: 461,
+        color:"#da483c",
+        highlight: "#da5d53",
+        label: "Loire Atlantique"
+    },
+    {
+        value: 15,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "Bretagne"
+    },
+    {
+        value: 6,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "Poitou Charentes"
+    },
+    {
+        value: 6,
+        color: "#f7c63d",
+        highlight: "#f7cd56",
+        label: "Maine et Loire"
+    },
+    {
+        value: 5,
+        color: "#da483c",
+        highlight: "#da5d53",
+        label: "Vendée"
+    },
+    {
+        value: 9,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "Région Parisienne"
+    },
+    {
+        value: 2,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "Charente Maritime"
+    },
+    {
+        value: 2,
+        color: "#f7c63d",
+        highlight: "#f7cd56",
+        label: "Indre et Loire"
+    },
+    {
+        value: 1,
+        color: "#da483c",
+        highlight: "#da5d53",
+        label: "Calvados"
+    },
+    {
+        value: 1,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "Puy de Dôme"
+    },
+    {
+        value: 1,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "Haute Vienne"
+    },
+    {
+        value: 1,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "Rhône"
+    }];
+
     $scope.dataPieAge2013 = [
     {
         value: 50,
@@ -303,6 +377,44 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
         label: "NC"
     }];
 
+    $scope.dataPieAge2015 = [
+    {
+        value: 111,
+        color:"#da483c",
+        highlight: "#da5d53",
+        label: "18-25"
+    },
+    {
+        value: 111,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "25-30"
+    },
+    {
+        value: 103,
+        color: "#0c9a54",
+        highlight: "#1c9a5c",
+        label: "30-35"
+    },
+    {
+        value: 71,
+        color: "#f7c63d",
+        highlight: "#f7cd56",
+        label: "35-40"
+    },
+    {
+        value: 51,
+        color: "#da483c",
+        highlight: "#da5d53",
+        label: "40+"
+    },
+    {
+        value: 147,
+        color: "#6388c5",
+        highlight: "#7694c5",
+        label: "NC"
+    }];
+
     $scope.optionsPie = {
 	    //Boolean - Whether we should show a stroke on each segment
 	    segmentShowStroke : true,
@@ -327,6 +439,15 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 
 	    //Boolean - Whether we animate scaling the Doughnut from the centre
 	    animateScale : false,
+
+        // Boolean - Determines whether to draw tooltips on the canvas or not
+        showTooltips: true,
+
+        // Function - Determines whether to execute the customTooltips function instead of drawing the built in tooltips (See [Advanced - External Tooltips](#advanced-usage-custom-tooltips))
+        customTooltips: false,
+
+        // Array - Array of string names to attach tooltip events
+        tooltipEvents: ["mousemove", "touchstart", "touchmove"],
 
 	    //String - A legend template
 	    legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>"

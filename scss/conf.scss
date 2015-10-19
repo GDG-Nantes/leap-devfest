@@ -71,15 +71,18 @@
 		.conf-speakers{
 			position: relative;
 			margin-bottom: 10px;
+			display:block;
 		}
 
 		.img-speaker{
-			top:$size-cirular-xs;
+			vertical-align:middle;
+			//top:$size-cirular-xs;
 			display: inline-block;
-			top: $size-cirular-xs / 2;
+			//top: $size-cirular-xs / 2;
 		}
 
 		.speaker-name{
+			vertical-align:middle;
 			display: inline-block;
 			height: $size-cirular-xs;
 			line-height: $size-cirular-xs;

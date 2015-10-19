@@ -16,7 +16,9 @@ components.directive('chart', ['$rootScope'
     link: function postLink(scope, iElement, iAttrs) { 
 
 
-      Chart.defaults.global.tooltipEvents = ["mousemove","click"];
+      //Chart.defaults.global.tooltipEvents = ["mousemove","click"];
+      //Chart.defaults.global.showTooltips = true;
+      //Chart.defaults.global.customTooltips = true;
 
       var ctx = iElement[0].getContext("2d");
       var myNewChart = null;
