@@ -73,20 +73,24 @@ module.exports = function (grunt) {
    
 
     // Configuration du watch : compilation sass + livereload sur modif sass et html
-
+    browserSync: {
+        bsFiles: {
+            src : ['css/*.css',
+                  'partials/**/*.html',
+                  'index.html',
+                  'javascript/**/*.js'
+            ]
+        },
+        options: {
+            server: {
+                baseDir: "./"
+            }
+        }
+    },
     watch: {
-      options: {
-        livereload: true
-      },
       sass: {
         files: ['<%= src.scss.all %>'],
         tasks: ['compass']
-      },
-      html: {
-        files: ['<%= src.html.all %>']
-      },
-      javascript: {
-        files: ['<%= src.js.app %>']
       }
     }
 
@@ -96,6 +100,6 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
   
   // Declaration des taches
-  grunt.registerTask('serve',        ['compass', 'http-server:dev', 'watch']);
+  grunt.registerTask('serve',        ['compass', 'browserSync', 'watch']);
   
 };
