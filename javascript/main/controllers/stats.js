@@ -67,68 +67,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 
 	};
 
-	$scope.dataPieRegion2013 = [
-    {
-        value: 166,
-        color:"#da483c", //Red
-        highlight: "#da5d53",
-        label: "Loire Atlantique"
-    },
-    {
-        value: 15,
-        color: "#6388c5", // Blue
-        highlight: "#7694c5",
-        label: "Bretagne"
-    },
-    {
-        value: 4,
-        color: "#0c9a54", // Green
-        highlight: "#1c9a5c",
-        label: "Vendée"
-    },
-    {
-        value: 20,
-        color: "#f7c63d", // Yellow
-        highlight: "#f7cd56",
-        label: "Maine et Loire"
-    },
-    {
-        value: 5,
-        color: "#da483c",
-        highlight: "#da5d53",
-        label: "Languedoc"
-    },
-    {
-        value: 2,
-        color: "#6388c5",
-        highlight: "#7694c5",
-        label: "Hors France"
-    },
-    {
-        value: 2,
-        color: "#0c9a54",
-        highlight: "#1c9a5c",
-        label: "Nord pas de Callais"
-    },
-    {
-        value: 1,
-        color: "#f7c63d",
-        highlight: "#f7cd56",
-        label: "Drome"
-    },
-    {
-        value: 4,
-        color: "#da483c",
-        highlight: "#da5d53",
-        label: "Région Parisienne"
-    },
-    {
-        value: 1,
-        color: "#6388c5",
-        highlight: "#7694c5",
-        label: "Eure"
-    }];
-
+	
     $scope.dataPieRegion2014 = [
     {
         value: 408,
@@ -301,44 +240,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
         label: "Rhône"
     }];
 
-    $scope.dataPieAge2013 = [
-    {
-        value: 50,
-        color:"#da483c",
-        highlight: "#da5d53",
-        label: "18-23"
-    },
-    {
-        value: 51,
-        color: "#6388c5",
-        highlight: "#7694c5",
-        label: "23-30"
-    },
-    {
-        value: 33,
-        color: "#0c9a54",
-        highlight: "#1c9a5c",
-        label: "30-35"
-    },
-    {
-        value: 24,
-        color: "#f7c63d",
-        highlight: "#f7cd56",
-        label: "35-40"
-    },
-    {
-        value: 15,
-        color: "#da483c",
-        highlight: "#da5d53",
-        label: "40+"
-    },
-    {
-        value: 47,
-        color: "#6388c5",
-        highlight: "#7694c5",
-        label: "NC"
-    }];
-
+   
     $scope.dataPieAge2014 = [
     {
         value: 71,

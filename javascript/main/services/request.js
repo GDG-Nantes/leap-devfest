@@ -65,7 +65,7 @@ main.factory('Request', ['$q', '$http', '$rootScope',
 
         var statsMenu = {
           id:'stats',
-          label : 'DevFest En Chiffres',
+          label : 'Stats',
           icon : 'pie-chart',
           directLast : true,
           submenus : []

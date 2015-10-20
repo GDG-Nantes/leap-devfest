@@ -88,10 +88,8 @@ module.exports = function (grunt) {
         }
     },
     watch: {
-      sass: {
-        files: ['<%= src.scss.all %>'],
-        tasks: ['compass']
-      }
+      files: ['<%= src.scss.all %>'],
+      tasks: ['compass']
     }
 
   });
