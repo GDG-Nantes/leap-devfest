@@ -171,6 +171,7 @@ $width-block-last : 500px;
     }
     .img-speaker-parent + .overflow-text{        
         width:calc(100% - 120px);
+        position:absolute;
         
     }
 }

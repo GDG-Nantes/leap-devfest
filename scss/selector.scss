@@ -6,15 +6,15 @@
 
 $animation-duration : 2s;
 $size-border : 10px;
-$size : $size-cirular-xs-max + (2 * $size-border);
+$size : $size-cirular-xs + (2 * $size-border);
 $color-bg : #444;
 $color-border : darken($color-select,20%);
 
 .over-leap{
-  top: $size-cirular-xs / 2;
-  left: $size-cirular-xs;
-  height: $size-cirular-xs;
-  width: $size-cirular-xs;
+  top: $size-cirular-xs-max / 2;
+  left: $size-cirular-xs-max;
+  height: $size-cirular-xs-max;
+  width: $size-cirular-xs-max;
   position: relative;
   display: inline-block;
 
