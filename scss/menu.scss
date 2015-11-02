@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@import "compass";
 @import "colors";
 
 
@@ -96,9 +95,9 @@ $width-block-last : 500px;
 }
 
 #menu li.hover:after{
-    font-family: FontAwesome;
+    font-family: PixArrows;
     font-size: 4em;
-    content: '\f105';
+    content: '>';
     position: relative;
     right: -93px;
     //top: 20px;
@@ -186,9 +185,10 @@ $width-block-last : 500px;
 }
 
 li.move.last > .valid-div:after, li.move.last > .li_niv_0_content > .valid-div:after {
-    font-family: FontAwesome;
+    font-family: IconBitTwo;
     font-size: 2em;
-    content: '\f046';
+    content: '3';
+    text-align: center;
     background-color: $color-select;
     color: white;
     width: 1.5em;
@@ -207,9 +207,9 @@ li.move.last > .valid-div:after, li.move.last > .li_niv_0_content > .valid-div:a
 }
 
 .bg-last-li.move:after{
-    font-family: FontAwesome;
+    font-family: PixArrows;
     font-size: 4em;
-    content: '\f101';
+    content: '[';
     right: -1.5em;
     position: absolute;
 }
