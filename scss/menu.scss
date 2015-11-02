@@ -45,7 +45,33 @@ $width-block-last : 500px;
 }
 
 
+#menu .icon.fa.users:after{
+    font-family: IconBitTwo;
+    font-size: 1em;
+    content: 'i';
+    position: relative;
+    //top: 20px;
+    line-height: 0;
+}
 
+#menu .icon.fa.bullhorn:after{
+    font-family: Spaiders;
+    font-size: 2em;
+    content: 'p';
+    position: relative;
+    right:-45px;
+    //top: 20px;
+    line-height: 0;
+}
+
+#menu .icon.fa.pie-chart:after{
+    font-family: PixelInvaders;
+    font-size: 2em;
+    content: 'A';
+    position: relative;
+    //top: 20px;
+    line-height: 0;
+}
 
 #menu li{
     border: solid $bg-color 10px;

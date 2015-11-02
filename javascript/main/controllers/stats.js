@@ -62,6 +62,9 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 	    //Number - Spacing between data sets within X values
 	    barDatasetSpacing : 1,
 
+        // Array - Array of string names to attach tooltip events
+        tooltipEvents: ["mousemove", "touchstart", "touchmove"],
+
 	    //String - A legend template
 	    legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>"
 

@@ -40,11 +40,6 @@ components.directive('menuNavigation', ['$rootScope', '$http','$q'
         }
       }, true);
 
-      document.addEventListener('mousemove', function(event){
-          //manageInteractions([event.clientX, event.clientY], ul, ulElements, liElements);
-       });
-
-
       $rootScope.$on('leapState', function(evt, leapState){
       //$scope.$watch('leapState', function(leapState, oldLeapState){
 

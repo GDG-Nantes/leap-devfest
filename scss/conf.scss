@@ -34,12 +34,12 @@
 			margin: 0;
 			position: absolute;
 			height: $size-cirular;
-			line-height: 2em;
+			line-height: 1em;
 			width: 800px;
 			top: 0;
 			left: ($size-cirular / 2);
 			padding-left: ($size-cirular / 2) + 50px;
-			border-radius: $size-cirular / 2;
+			
 		}
 
 
@@ -59,7 +59,7 @@
 	}
 
 	.content-conf{
-		top: $size-cirular + 100px;
+		top: $size-cirular + 50px;
 		p{
 			font-size: $font-size-content;
 		}
@@ -98,6 +98,42 @@
 	
 
 
+	}
+
+	.fa.globe:after{
+		font-family: PixelCharas;
+	    font-size: 1em;
+	    content: 'a';
+	    position: relative;
+	    //top: 20px;
+	    line-height: 0;
+	}
+
+	.fa.mobile:after{
+		font-family: PixelCharas;
+	    font-size: 1em;
+	    content: 'f';
+	    position: relative;
+	    //top: 20px;
+	    line-height: 0;
+	}
+
+	.fa.cloud:after{
+		font-family: PixelCharas;
+	    font-size: 1em;
+	    content: 's';
+	    position: relative;
+	    //top: 20px;
+	    line-height: 0;
+	}
+
+	.fa.rocket:after{
+		font-family: PixelCharas;
+	    font-size: 1em;
+	    content: 'l';
+	    position: relative;
+	    //top: 20px;
+	    line-height: 0;
 	}
 
 }

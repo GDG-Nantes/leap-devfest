@@ -3,7 +3,7 @@
 		<li ng-repeat='level0 in menus' class='li_niv_0 h-{{menus.length}}' directLast="{{leve0.directLast}}" ng-class="{last : level0.directLast}" id='{{level0.id}}'>
 			<div class='li_niv_0_content'>
 				<div class='title'>{{level0.label}}</div>
-				<div class='icon fa fa-5x fa-{{level0.icon}}'></div>
+				<div class='icon fa fa-5x {{level0.icon}}'></div>
 			</div>			
 			<div ng-if="level0.directLast" class="bg-last-li top-{{menus.length}}"></div>
 			<div ng-if="level0.directLast" class="valid-div  top-db-{{menus.length}}"></div>
