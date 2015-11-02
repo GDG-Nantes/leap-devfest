@@ -17,7 +17,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 	            strokeColor: "rgba(218,72,60,0.8)",
 	            highlightFill: "rgba(218,72,60,0.75)",
 	            highlightStroke: "rgba(218,72,60,1)",
-	            data: [157, 220, 487, 510]
+	            data: [157, 220, 487, 702]
 	        },
 	        {
 	            label: "Nombre d'hommes",
@@ -25,7 +25,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 	            strokeColor: "rgba(99,136,197,0.8)",
 	            highlightFill: "rgba(99,136,197,0.75)",
 	            highlightStroke: "rgba(99,136,197,1)",
-	            data: [148, 204, 450, 478]
+	            data: [148, 204, 450, 631]
 	        },
 	        {
 	            label: "Nombre de femmes",
@@ -33,7 +33,7 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 	            strokeColor: "rgba(247,198,61,0.8)",
 	            highlightFill: "rgba(247,198,61,0.75)",
 	            highlightStroke: "rgba(247,198,61,1)",
-	            data: [8, 16, 33, 32]
+	            data: [8, 16, 33, 62]
 	        }
 	    ]
 	};
@@ -284,37 +284,37 @@ main.controller('StatsCtrl', ['$scope', function($scope) {
 
     $scope.dataPieAge2015 = [
     {
-        value: 111,
+        value: 112,
         color:"#da483c",
         highlight: "#da5d53",
         label: "18-25"
     },
     {
-        value: 111,
+        value: 113,
         color: "#6388c5",
         highlight: "#7694c5",
         label: "25-30"
     },
     {
-        value: 103,
+        value: 151,
         color: "#0c9a54",
         highlight: "#1c9a5c",
         label: "30-35"
     },
     {
-        value: 71,
+        value: 81,
         color: "#f7c63d",
         highlight: "#f7cd56",
         label: "35-40"
     },
     {
-        value: 51,
+        value: 74,
         color: "#da483c",
         highlight: "#da5d53",
         label: "40+"
     },
     {
-        value: 147,
+        value: 171,
         color: "#6388c5",
         highlight: "#7694c5",
         label: "NC"
